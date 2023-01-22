@@ -1,6 +1,7 @@
 body {
 	padding: 0px;
 	margin: 0px;
+	background-color: whitesmoke;
 }
 .navbar {
 	background-color: orange;
@@ -13,7 +14,6 @@ body {
 	z-index: 2;
 }
 .hero {
-
 	background-color: orange;
 	margin: 0;
   padding: 0px;
@@ -103,4 +103,85 @@ position: relative;
 }
 h2 {
 	text-align: center;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
+
+
+
+
+.card__image {
+  max-width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+
+
+.story-card {
+  display: flex;
+  flex-direction: column;
+  width: clamp(20rem, calc(20rem + 2vw), 22rem);
+  overflow: hidden;
+  box-shadow: 0 .1rem 1rem rgba(0, 0, 0, 0.1);
+  border-radius: 1em;
+  background: #ECE9E6;
+background: linear-gradient(to right, #FFFFFF, #ECE9E6);
+
+}
+
+
+
+.card__body {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+
+
+.tag {
+  align-self: flex-start;
+  padding: .25em .75em;
+  border-radius: 1em;
+  font-size: .75rem;
+}
+
+.tag + .tag {
+  margin-left: .5em;
+}
+
+.tag-blue {
+  background-color: blue;
+  color: white
+}
+
+
+.card__body h4 {
+  font-size: 1.5rem;
+  text-transform: capitalize;
+}
+
+.card__footer {
+  display: flex;
+  padding: 1rem;
+  margin-top: auto;
+}
+
+.user {
+  display: flex;
+  gap: .5rem;
+}
+
+
+.user__info > small {
+  color: #666;
+}
+.blog-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1200px;
+  margin-block: 2rem;
+  gap: 2rem;
 }
