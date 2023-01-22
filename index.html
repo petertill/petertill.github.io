@@ -7,6 +7,7 @@
   <title>Peter Till</title>
   <link href="style.css" rel="stylesheet" type="text/css" />
 	<script src="https://kit.fontawesome.com/d9ec437633.js" crossorigin="anonymous"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -40,33 +41,93 @@
 		<h2>My Projects</h2>
 		<div class="cards-container">
 			<div class="card">
-				<a href="https://google.com/" class="card-link">
+				<a href="./project.html?id=1738443101315834206" class="card-link">
 				<img class="card-img" src="https://www.gynprog.com.br/wp-content/uploads/2017/06/wood-blog-placeholder.jpg">
-				<h3>Goatvids</h3>
-				<p>Teszt leírTeszt leírásTeszt leírásTeszt leírásTeszt leírásTeszt leírásTeszt leírásTeszt leírásTeszt leírásTeszt leírásás</p>
+				<h3>Shutter control app</h3>
+				<p>I made an application that can be used to control a shutter.</p>
 				</a>
 			</div>
-			<!--div class="card">
-				<a href="https://google.com/" class="card-link">
-				<img class="card-img" src="https://www.gynprog.com.br/wp-content/uploads/2017/06/wood-blog-placeholder.jpg">
-				<h3>Goatvids</h3>
-				<p>Teszt leírTeszt leírásTeszt leírásTeszt leírásTeszt leírásTeszt leírásTeszt leírásTeszt leírásTeszt leírásTeszt leírásás</p>
-				</a>
-			</div>
-			<div class="card">
-				<a href="https://google.com/" class="card-link">
-				<img class="card-img" src="https://www.gynprog.com.br/wp-content/uploads/2017/06/wood-blog-placeholder.jpg">
-				<h3>Goatvids</h3>
-				<p>Teszt leírTeszt leírásTeszt leírásTeszt leírásTeszt leírásTeszt leírásTeszt leírásTeszt leírásTeszt leírásTeszt leírásás</p>
-				</a>
-			</div-->
 			
 		</div>
 	</section>
+	<!--section id="sect-blog">
+		<h2>My Latest Stories</h2>
+		<div class="blog-container">
+  <div class="story-card">
+    <div class="card__header">
+      <img src="https://source.unsplash.com/600x400/?computer" alt="card__image" class="card__image" width="600">
+    </div>
+    <div class="card__body">
+      <span class="tag tag-blue">Technology</span>
+      <h4>What's new in 2022 Tech</h4>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi perferendis molestiae non nemo doloribus. Doloremque, nihil! At ea atque quidem!</p>
+    </div>
+    <div class="card__footer">
+      <div class="user">
+        <div class="user__info">
+          <small>2h ago</small>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="story-card">
+    <div class="card__header">
+		<img src="https://source.unsplash.com/600x400/?computer" alt="card__image" class="card__image" width="600">
+    </div>
+    <div class="card__body">
+      <span class="tag tag-brown">Food</span>
+      <h4>Delicious Food</h4>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi perferendis molestiae non nemo doloribus. Doloremque, nihil! At ea atque quidem!</p>
+    </div>
+    <div class="card__footer">
+      <div class="user">
+        <div class="user__info">
+          <small>Yesterday</small>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="story-card">
+    <div class="card__header">
+		<img src="https://source.unsplash.com/600x400/?computer" alt="card__image" class="card__image" width="600">
+    </div>
+    <div class="card__body">
+      <span class="tag tag-red">Automobile</span>
+      <h4>Race to your heart content</h4>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi perferendis molestiae non nemo doloribus. Doloremque, nihil! At ea atque quidem!</p>
+    </div>
+    <div class="card__footer">
+      <div class="user">
+        <div class="user__info">
+          <small>2d ago</small>
+        </div>
+      </div>
+    </div>
+  </div>
+		</div>
+</section-->
 	
 	
 </div>
-  <script src="script.js"></script>
+  <script defer type="text/javascript">
+	  const username = "petertill";
+const RSSUrl = "https://medium.com/feed/@" + username;
+const RSSConverter = "https://api.rss2json.com/v1/api.json?rss_url=" + RSSUrl;
+
+const getMediumData = async () => {
+	const response = await fetch(RSSConverter);
+	const data = await response.json();
+	console.log(data);
+	return data;
+}
+
+const replaceContent = async () => {
+	const posts = await getMediumData();
+	for(let post of posts.items){
+		console.log(post.title)
+	}
+}
+  </script>
 
  
 </body>
