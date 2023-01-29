@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Project - Peter Till</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+	<script src="https://kit.fontawesome.com/d9ec437633.js" crossorigin="anonymous"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+
+<body>
+ <div class="navbar">
+	 <a href="index.html" class="nav-title">Peter Till</a>
+ </div>
+<div class="content">
+	<h1 id="blogger-title">Project name</h1>
+	<span id="blogger-date"></span><br><hr>
+	<center>
+	<div id="blogger-content" style="max-width: 60%; min-width: 100%; text-align: left;"></div>
+	</center>
+	
+	
+</div>
+  <script defer type="text/javascript">
+	  const urlParams = new URLSearchParams(window.location.search);
+	  const post = urlParams.get('id')
+	  let xhr = new XMLHttpRequest();
+xhr.open("GET", "https://www.googleapis.com/blogger/v3/blogs/7317150173486814663/posts/" + post + "?key=AIzaSyAzRWItpwd__2u2D6bRovgtorsyeLT56Jg");
+
+title = document.getElementById('blogger-title');
+content = document.getElementById('blogger-content');
+date = document.getElementById('blogger-date');
+	  
+xhr.onreadystatechange = function () {
+   if (xhr.readyState === 4) {
+	   response = JSON.parse(xhr.responseText);
+	   document.title = response['title'] + " - Peter Till";
+	   title.innerHTML = response['title'];
+	   content.innerHTML = response['content'];
+	   date.innerHTML = response['published'];
+   }};
+
+xhr.send();
+  </script>
+
+ 
+</body>
+
+</html>
