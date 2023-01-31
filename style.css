@@ -223,7 +223,7 @@ background: linear-gradient(to right, #FFFFFF, #ECE9E6);
 	flex-wrap: wrap;
 	background: linear-gradient(90deg, #995200 0 ,#ffd500 );
 }
-.hero-container h1, p {
+.hero-container h1, .hero-container p {
 	color: white;
 	max-width: 300px;
 	display: block;
