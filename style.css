@@ -281,3 +281,5 @@ background: linear-gradient(to right, #FFFFFF, #ECE9E6);
 	border: 3px solid white;
 	border-radius: 10px;
 }
+/*REMOVE MAILCHIMP LOGO */
+.brandingLogo {display: none;}
