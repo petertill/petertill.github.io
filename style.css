@@ -283,3 +283,4 @@ background: linear-gradient(to right, #FFFFFF, #ECE9E6);
 }
 /*REMOVE MAILCHIMP LOGO */
 .brandingLogo {display: none;}
+.mc_embed_signup {max-width: 50%; min-width: 70%;}
