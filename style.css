@@ -19,12 +19,12 @@ body {
  
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #888; 
+  background: #ff9900; 
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #555; 
+  background: #cc6600; 
 }
 .navbar {
 	background-color: orange;
