@@ -29,29 +29,21 @@
 		<meta property="twitter:image" content="https://metatags.io/assets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png">
 		<!-- SCRIPTS -->	
 		<script src="https://kit.fontawesome.com/d9ec437633.js" crossorigin="anonymous"></script>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-		<script async src="https://www.googletagmanager.com/gtag/js?id=G-GWF4N7ZR80"></script>
-		<script>
-		  window.dataLayer = window.dataLayer || [];
-		  function gtag(){dataLayer.push(arguments);}
-		  gtag('js', new Date());
-
-		  gtag('config', 'G-GWF4N7ZR80');
-		</script>
 	</head>
 	<body>
 	 <div class="navbar">
-		<span class="nav-title">Peter Till</span>
+		<a class="nav-title" href="./index.html">Peter Till</a>
 		<ul class="nav-items">
 			<li class="nav-item"><a href="./scriptkiddie.html">Script Kiddie</a></li>
 		</ul>
 	</div>
- <div class="hero-container">
+		<br><br><br><br>
+ <div class="hero-container divided">
 	<div class="left">
-		<img class="hero-img hero-invisible" style="width: 130px; height: 130px;" src="./assets/petya.png" alt="Profile picture">
 		<div class="hero-text">	  
-			<h1>Hi, I'm Peter Till!</h1>
-			<p>I consider myself as a completely normal guy who programs as a hobby and is preparing for his profession. I usually spend my free time developing interactive websites, chatbots or creating mobile and desktop applications. I have been programming at a serious level for two or three years. Of course, I still have room for improvement, but I am always training myself.</p>
+			<h1>Peter Till<br>
+				<span class="hero-prof">Software Engineer</span>
+			</h1>
 			<a class="btn btn-primary" href="https://www.google.com">Text me!</a> <a class="btn" href="https://www.google.com">Text me!</a>
 		 </div>
 	</div>
@@ -60,23 +52,33 @@
 	</div>
   </div>
 	<div class="content">
+		<section id="sect-about">
+			<h2>About Me</h2>
+			<p>I consider myself as a completely normal guy who programs as a hobby and is preparing for his profession. I usually spend my free time developing interactive websites, chatbots or creating mobile and desktop applications. I have been programming at a serious level for two or three years. Of course, I still have room for improvement, but I am always training myself.</p>
+			
+		</section>
 		<section id="sect-socials">
 			<h2>My Socials</h2>
 			<p>Test text</p>
-			<div class="cards-container">
-				<div class="social-card">
-					<a href="https://www.youtube.com/@codepetya" class="card-link">
-						<i class="fab fa-youtube"></i> Youtube
-					</a>
-				</div>
-				<div class="social-card">
-					<a href="https://petertill.medium.com/" class="card-link">
-						<i class="fab fa-medium"></i> Medium
-					</a>
-				</div>
+			<div class="card-layout">
+				<a href="https://www.youtube.com/@codepetya" class="card-link social-card">
+					<i class="red fab fa-youtube"></i> Youtube
+				</a>
+				<a href="https://petertill.medium.com/" class="card-link social-card">
+					<i class="black fab fa-medium"></i> Medium
+				</a>
+				<a href="https://petertill.medium.com/" class="card-link social-card">
+					<i class="orange fab fa-stack-overflow"></i> Stack Overflow
+				</a>
+				<a href="https://petertill.medium.com/" class="card-link social-card">
+					<i class="black fab fa-github"></i> Github
+				</a>
+				<a href="https://petertill.medium.com/" class="card-link social-card">
+					<i class="blue fab fa-linkedin"></i> LinkedIn
+				</a>
 			</div>
 		</section>
-		<section id="sect-projects">
+		<!--section id="sect-projects">
 			<h2>My Projects</h2>
 			<div class="cards-container">
 				<div class="card">
@@ -115,7 +117,7 @@
 				</div>
 					
 			</div>
-		</section>
+	</section-->
 	
 <!-- Begin Mailchimp Signup Form -->
 <div id="mc_embed_signup">
@@ -153,6 +155,49 @@
 </div>
 <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script>	
 <!--End mc_embed_signup-->	
+<script type="text/javascript">
+	const typedTextSpan = document.querySelector(".typed-text");
+const cursorSpan = document.querySelector(".cursor");
+
+const textArray = ["programmer", "blogger", "book author", "designer"];
+const typingDelay = 200;
+const erasingDelay = 100;
+const newTextDelay = 2000; // Delay between current and next text
+let textArrayIndex = 0;
+let charIndex = 0;
+
+function type() {
+  if (charIndex < textArray[textArrayIndex].length) {
+    if(!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
+    typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
+    charIndex++;
+    setTimeout(type, typingDelay);
+  } 
+  else {
+    cursorSpan.classList.remove("typing");
+  	setTimeout(erase, newTextDelay);
+  }
+}
+
+function erase() {
+	if (charIndex > 0) {
+    if(!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
+    typedTextSpan.textContent = textArray[textArrayIndex].substring(0, charIndex-1);
+    charIndex--;
+    setTimeout(erase, erasingDelay);
+  } 
+  else {
+    cursorSpan.classList.remove("typing");
+    textArrayIndex++;
+    if(textArrayIndex>=textArray.length) textArrayIndex=0;
+    setTimeout(type, typingDelay + 1100);
+  }
+}
+
+document.addEventListener("DOMContentLoaded", function() { // On DOM Load initiate the effect
+  if(textArray.length) setTimeout(type, newTextDelay + 250);
+});
+</script>
 </body>
 
 </html>
