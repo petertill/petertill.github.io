@@ -38,6 +38,9 @@ h2 {color:#dd7732;text-align: center;}
 	/*.divided{flex-direction: row-reverse;}*/
 	.left{order: 3}.right{order: 2;}
 }
+.link {
+	color: white;
+}
 /* SCROLLBAR */
 ::-webkit-scrollbar {width: 10px;}
 ::-webkit-scrollbar-track {background: #f1f1f1;}
