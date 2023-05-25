@@ -40,8 +40,7 @@ import data from './products.json' assert { type: 'json' };
                         </div>
                         <p class="lead">${current["shortdesc"]}</p>
                         <div class="d-flex">
-                            <script src="https://gumroad.com/js/gumroad.js"></script>
-                            <a class="gumroad-button" href="https://petertill.gumroad.com/l/java" data-gumroad-overlay-checkout="true">Get on</a>
+                            <a class="btn btn-primary" href="https://petertill.gumroad.com/l/java">Get on</a>
                         </div>
                     </div>
                 </div>
