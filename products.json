@@ -1,9 +1,9 @@
 [{
     "slug":"java",
-    "image":"java_ebook.jpg",
+    "image":"java.png",
     "title":"The basics of Java programming",
     "subtitle": "E-book",
-    "shortdesc":"",
+    "shortdesc":"An ebook about the fundamentals of Java programming",
     "description": "From this book you can learn the basics of the Java programming language. Everything is broken down into parts in a sketchy way, so it's much easier to learn the basics than having to scramble through 200 pages. The book also has example code snippets for everything. There are practice tasks at the end of the chapters, with which you can test your acquired knowledge. Personally, I have been programming at a serious level for two or three years. Of course, I still have room for improvement, but I am always training myself to be better and better! If you read my book, you can learn from a person who went from zero to a (relatively) successful programmer at the cost of a lot of struggle. You don't have to go through this struggle again, because I will give you my knowledge in a simplified, comprehensible way with the help of my book. Actually, that's the summary of the book in a nutshell, I wouldn't even add more words... I wish you good luck in learning programming! <br><br>Péter, a programmer and the author of the book",
     "price": "FREE",
     "isfreebie": true,
