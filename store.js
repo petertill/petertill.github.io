@@ -40,7 +40,7 @@ import data from './products.json' assert { type: 'json' };
                         </div>
                         <p class="lead">${current["shortdesc"]}</p>
                         <div class="d-flex">
-                            <a class="btn btn-primary" href="https://petertill.gumroad.com/l/java">Get on</a>
+                            <a class="btn btn-primary" onclick="addToCart(${slug});">Add to cart</a>
                         </div>
                     </div>
                 </div>
@@ -54,3 +54,27 @@ import data from './products.json' assert { type: 'json' };
 	}else{
 	content.innerHTML = `<h1>No product found</h1>`
 	}
+
+
+
+function addToCart(slug) {
+
+    //Get the cart items object
+    var cartValue = sessionStorage.getItem("cart");
+    var cartObj = JSON.parse(cartValue);
+    
+    //New product item
+    var newItem = {
+        slug: slug,
+        qty: 1
+    };
+
+    cartObj.push(newItem);
+
+    var jsonStr = JSON.stringify(cartObj);
+    sessionStorage.setItem("cart", jsonStr);
+    console.log("Added to cart")
+
+    
+
+}
