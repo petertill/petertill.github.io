@@ -31,7 +31,7 @@ import data from './products.json' assert { type: 'json' };
         <section class="py-5">
             <div class="container px-4 px-lg-5 my-5">
                 <div class="row gx-4 gx-lg-5 align-items-center">
-                    <div class="col-md-6"><img class="card-img-top mb-5 mb-md-0" src="./assets/products/${current["image"]}" width="600" height="700" style="object-fit: contain;" alt="Product image"></div><!--600x700-->
+                    <div class="col-md-6"><img class="card-img-top mb-5 mb-md-0 product-img" src="./assets/products/${current["image"]}" alt="..."></div>
                     <div class="col-md-6">
                         <div class="small mb-1">Type: ${current["subtitle"]}</div>
                         <h1 class="display-5 fw-bolder">${current["title"]}</h1>
@@ -41,7 +41,7 @@ import data from './products.json' assert { type: 'json' };
                         <p class="lead">${current["shortdesc"]}</p>
                         <div class="d-flex">
                             <script src="https://gumroad.com/js/gumroad.js"></script>
-                            <a class="gumroad-button" href="https://petertill.gumroad.com/l/java">Get on</a>
+                            <a class="gumroad-button" href="https://petertill.gumroad.com/l/java" data-gumroad-overlay-checkout="true">Get on</a>
                         </div>
                     </div>
                 </div>

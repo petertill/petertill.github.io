@@ -85,3 +85,10 @@ h1 {
 .card-img-top {
     border-radius: var(--border-radius);
 }
+
+.product-img {
+    max-height: 700px;
+    height: auto;
+    width: 600;
+    object-fit: contain;
+}
