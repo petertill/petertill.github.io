@@ -73,7 +73,7 @@ function addToCart(slug) {
 
     var jsonStr = JSON.stringify(cartObj);
     sessionStorage.setItem("cart", jsonStr);
-    console.log("Added to cart")
+    console.log("Added to cart");
 
     
 
