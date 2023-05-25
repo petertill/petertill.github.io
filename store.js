@@ -40,7 +40,7 @@ import data from './products.json' assert { type: 'json' };
                         </div>
                         <p class="lead">${current["shortdesc"]}</p>
                         <div class="d-flex">
-                            <a class="btn btn-primary" onclick="addToCart("${slug}");">Add to cart</a>
+                            <a class="btn btn-primary" onclick="addToCart('${slug}');">Add to cart</a>
                         </div>
                     </div>
                 </div>
