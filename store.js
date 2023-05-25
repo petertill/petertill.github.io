@@ -69,7 +69,13 @@ function addToCart(slug) {
         qty: 1
     };
 
+    if(cartObj != null){
+
     cartObj.push(newItem);
+
+    }else {
+        cartObj = newItem;
+    }
 
     var jsonStr = JSON.stringify(cartObj);
     sessionStorage.setItem("cart", jsonStr);
