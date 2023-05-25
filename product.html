@@ -60,6 +60,29 @@
         </section>
       </main>
       <script src="store.js" type="module"></script>
+      <script type="text/javascript">
+        function addToCart(slug) {
+
+//Get the cart items object
+var cartValue = sessionStorage.getItem("cart");
+var cartObj = JSON.parse(cartValue);
+
+//New product item
+var newItem = {
+    slug: slug,
+    qty: 1
+};
+
+cartObj.push(newItem);
+
+var jsonStr = JSON.stringify(cartObj);
+sessionStorage.setItem("cart", jsonStr);
+console.log("Added to cart")
+
+
+
+}
+      </script>
 </body>
 </html>
 
