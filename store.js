@@ -64,10 +64,10 @@ function addToCart(slug) {
     var cartObj = JSON.parse(cartValue);
     
     //New product item
-    var newItem = {
+    var newItem = [{
         slug: slug,
         qty: 1
-    };
+    }];
 
     if(cartObj != null){
 
