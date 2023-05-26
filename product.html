@@ -77,10 +77,9 @@ var cartValue = sessionStorage.getItem("cart");
 var cartObj = JSON.parse(cartValue);
 
 //New product item
-var newItem = {
-    slug: slug,
-    qty: 1
-};
+var newItem = [{
+        slug: [slug, 1]
+    }];
 
 if(cartObj != null){
 
