@@ -65,8 +65,7 @@ function addToCart(slug) {
     
     //New product item
     var newItem = [{
-        slug: slug,
-        qty: 1
+        slug: [slug, 1]
     }];
 
     if(cartObj != null){
