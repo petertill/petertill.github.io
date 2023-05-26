@@ -39,6 +39,9 @@ section {
     background-color: #1B223D;
     padding-top: 70px;
 }
+.main {
+    padding-top: 70px;
+}
 h1 {
     font-size: 2em;
     font-weight: bold;
