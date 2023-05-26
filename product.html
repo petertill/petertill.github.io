@@ -14,27 +14,36 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark custom-navbar p-10 fixed-top">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="./index.html">
-            <img src="./assets/brand/logo.png" alt="" width="40" height="40" class="d-inline-block align-text-top">
-            Peter Till
-          </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Script Kiddie</a>
-              </li><!--.disabled to disable-->
-            </ul>
-          </div>
-        </div>
-      </nav>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark custom-navbar p-10 fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="./index.html">
+        <img src="./assets/brand/logo.png" alt="" width="40" height="40" class="d-inline-block align-text-top">
+        Peter Till
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <!--span class="navbar-toggler-icon">re</span-->
+        <span class="" role="button" ><i class="fas fa-code-branch" aria-hidden="true" style="color:#e6e6ff"></i></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Script Kiddie</a>
+          </li><!--.disabled to disable-->
+          <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fas fa-shopping-cart"></i> <span class="badge badge-danger bg-danger px-1">
+                <script>
+                    var cart = JSON.parse(sessionStorage.getItem("cart"));
+                    if(cart != null){document.write(cart.length);}else{document.write("0");}
+                </script>
+            </span></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
       <main id="content" class="container">
         <section class="py-5">
             <div class="container px-4 px-lg-5 my-5">
