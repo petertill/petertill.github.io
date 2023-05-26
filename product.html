@@ -36,6 +36,7 @@
             <a class="nav-link" href="#"><i class="fas fa-shopping-cart"></i> <span class="badge badge-danger bg-danger px-1">
                 <script>
                     var cart = JSON.parse(sessionStorage.getItem("cart"));
+                    console.log(cart);
                     if(cart != null){document.write(cart.length);}else{document.write("0");}
                 </script>
             </span></a>
