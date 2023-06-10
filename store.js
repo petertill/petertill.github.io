@@ -41,9 +41,6 @@ import data from './products.json' assert { type: 'json' };
                         <p class="lead">${current["shortdesc"]}</p>
                         <div class="d-flex">
                         ${current["isfreebie"] ? `
-                        <div class="alert alert-primary" role="alert">
-                        In addition to this stuff, you will get all my free products in one email.
-                        </div><br><br>
                         <form action="https://app.gumroad.com/follow_from_embed_form" method="post">
                         <div class="input-group mb-3">
                             <input type="hidden" name="seller_id" value="5953633473367"/>
