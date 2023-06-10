@@ -95,3 +95,27 @@ h1 {
     width: 600;
     object-fit: contain;
 }
+
+/*DIALOG*/
+dialog {
+    background-color: #1E222D;
+    color: white;
+    border: 1px solid white;
+    border-width: 2px;
+    border-radius: var(--border-radius);
+    padding: 10px;
+    margin: auto;
+    min-width: 300px;
+    width: 80%;
+}
+dialog > h2 {
+    text-align: center;
+}
+dialog::backdrop {
+    background-color: rgba(112, 112, 112, 0.2);
+}
+
+/*Table*/
+table {
+    color: white;
+}

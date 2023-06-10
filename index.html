@@ -182,7 +182,7 @@
                         <div class="card-block">
                             <h4 class="card-title">CodersCoin</h4>
                             <p class="card-text">CodersCoin is a cryptocurrency for developers, designers and IT enthusiasts.</p>
-                            <a href="https://coderscoin.github.io/" class="btn btn-primary">Try CodersCoin</a>
+                            <button onclick="csc.showModal()" class="btn btn-primary">Try CodersCoin</button>
                         </div>
                     </div>
                 </div>
@@ -192,7 +192,7 @@
                         <div class="card-block">
                             <h4 class="card-title">FocusMode</h4>
                             <p class="card-text">A powerful productivity tool that blocks distracting websites while in a work mode.</p>
-                            <a href="https://microsoftedge.microsoft.com/addons/detail/oijfegadlcnfapbpkpkfmloghahlicea" class="btn btn-primary">Try FocusMode</a>
+                            <button onclick="fmode.showModal()" class="btn btn-primary">Try FocusMode</a>
                         </div>
                     </div>
                 </div>
@@ -383,6 +383,58 @@
         
 
       </main>
+      <dialog id="csc" class="container">
+        <div class="row">
+            <div class="col-sm">
+                <h2>CodersCoin</h2>
+                <p>CodersCoin is a unique and completely proprietary blockchain and cryptocurrency technology developed by Peter Till. CodersCoin serves as a kind of reputation and credit for programmers, designers, and computer enthusiasts. The goal of the development is to provide a simple platform for digital creators to pay themselves without the intervention of any banks or governments. In addition, digital files can be sent securely. No separate app needed, just a Github account. With CodersCoin you can empower your community with fast and secure transactions or support your favorite open source projects.</p>
+            </div>
+            <div class="col-sm">
+                <table class="table" style="color: white;">
+                    <thead></thead>
+                    <tr>
+                        <td>Technology</td>
+                        <td>NodeJS, Express.js, MongoDB</td>
+                    </tr>
+                    <tr>
+                        <td>Time to create</td>
+                        <td>Less than a week</td>
+                    </tr>
+                    <tr>
+                        <td>Website</td>
+                        <td><a href="https://coderscoin.github.io/?utm_source=portfolio&utm_medium=project&utm_campaign=popup">Website</a></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <button class="btn btn-primary" onclick="csc.close()">Close</button><!--Or from with dialog method-->
+      </dialog>
+      <dialog id="fmode" class="container">
+        <div class="row">
+            <div class="col-sm">
+                <h2>FocusMode</h2>
+                <p>FocusMode is a powerful productivity tool made by Peter Till, that allows you to create custom modes such as study and work and block disruptive websites in those modes. Simply add the websites you want to block to each mode. These websites are automatically blocked when this mode is enabled. FocusMode lets you focus on your work or study without social media, news sites, or other online distractions. FocusMode helps you get more done in less time. </p>
+            </div>
+            <div class="col-sm">
+                <table class="table" style="color: white;">
+                    <thead></thead>
+                    <tr>
+                        <td>Technology</td>
+                        <td>JavaScript, HTML, CSS, Bootstrap, Chrome API</td>
+                    </tr>
+                    <tr>
+                        <td>Time to create</td>
+                        <td>Less than a week</td>
+                    </tr>
+                    <tr>
+                        <td>Website</td>
+                        <td><a href="https://microsoftedge.microsoft.com/addons/detail/oijfegadlcnfapbpkpkfmloghahlicea">Microsoft Addon</a></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <button class="btn btn-primary" onclick="fmode.close()">Close</button><!--Or from with dialog method-->
+      </dialog>
       <footer class="bg-light text-center text-lg-start">
         <!-- Copyright fixed-bottom -->
         <div class="text-center p-3" style="background-color: #1B223D; color: white;">
