@@ -50,6 +50,14 @@ import data from './products.json' assert { type: 'json' };
           <h2>Description</h2>
           <p>${current["description"]}</p>
         </section>
+        <dialog id="emailpopup" class="container">
+        <a id="download" href="filename" download="${slug}_petertill" style="display:none;"></a>
+        <form onsubmit="https://google.com/" action="https://app.gumroad.com/follow_from_embed_form" method="post">
+          <input type="hidden" name="seller_id" value="5953633473367"/>
+          <input class="form-control" type="email" placeholder="Your email address" name="email" value=""/>
+          <button class="btn btn-primary" type="submit">Get it</button></form>
+        <button class="btn btn-primary" onclick="emailpopup.close()">Close</button><!--Or from with dialog method-->
+        </dialog>
         `;
 	}else{
 	content.innerHTML = `<h1>No product found</h1>`
