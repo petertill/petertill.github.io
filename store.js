@@ -40,7 +40,17 @@ import data from './products.json' assert { type: 'json' };
                         </div>
                         <p class="lead">${current["shortdesc"]}</p>
                         <div class="d-flex">
-                        ${current["isfreebie"] ? `<a class="btn btn-primary" onclick="emailpopup.showModal();">Get it</a>`: `<a class="btn btn-primary" onclick="addToCart('${slug}');">Add to cart</a>`}
+                        ${current["isfreebie"] ? `<a class="btn btn-primary" onclick="emailpopup.showModal();">Get it</a>`: `
+                        <form action="https://app.gumroad.com/follow_from_embed_form" method="post">
+                        <div class="input-group mb-3">
+                            <input type="hidden" name="seller_id" value="5953633473367"/>
+                            <input class="form-control" type="email" placeholder="Your email address" name="email" value=""/>
+                            <div class="input-group-append">
+                                <button class="btn btn-primary" type="submit">Get it</button>
+                            </div>
+                        </div>
+                        </form>
+                        `}
                         </div>
                     </div>
                 </div>
@@ -82,10 +92,4 @@ function addToCart(slug) {
 
     
 
-}
-
-function toggleDownload(){
-    //emailpopup = document.getElementById("emailpopup");
-    emailpopup.close();
-    window.location.href = "./download.html";
 }
