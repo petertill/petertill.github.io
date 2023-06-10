@@ -50,6 +50,9 @@ import data from './products.json' assert { type: 'json' };
                             </div>
                         </div>
                         </form>
+                        <div class="alert alert-primary" role="alert">
+                        In addition to this stuff, you will get all my free products in one email.
+                        </div>
                         `: `<a class="btn btn-primary" onclick="addToCart('${slug}');">Add to cart</a>`}
                         </div>
                     </div>
