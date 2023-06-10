@@ -49,7 +49,7 @@ import data from './products.json' assert { type: 'json' };
                                 <button class="btn btn-primary" type="submit">Get it</button>
                             </div>
                         </div>
-                        </form>
+                        </form><br>
                         <div class="alert alert-primary" role="alert">
                         In addition to this stuff, you will get all my free products in one email.
                         </div>
