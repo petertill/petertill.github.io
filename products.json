@@ -29,6 +29,21 @@
     }
 },
 {
+    "slug":"budgetcat",
+    "image":"notion.png",
+    "title":"BudgetCat budget tracker | Notion edition",
+    "subtitle": "Notion template",
+    "shortdesc":"SOON",
+    "description": "SOON",
+    "price": "FREE",
+    "isfreebie": true,
+    "link":"./media/Book-en.pdf",
+    "type":{
+        "name":"ebook",
+        "pages":12
+    }
+},
+{
     "slug":"python",
     "image":"java_ebook.jpg",
     "title":"Test product",
