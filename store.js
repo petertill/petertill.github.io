@@ -25,6 +25,8 @@ import data from './products.json' assert { type: 'json' };
 			<input type="submit" value="Download it">
 		</form>
 		`*/
+        //Change page title to product title
+        document.title = `${current["title"]} | Peter Till`;
         console.log(current["link"]);
 		content.innerHTML = 
         `
