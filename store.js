@@ -25,7 +25,7 @@ import data from './products.json' assert { type: 'json' };
 			<input type="submit" value="Download it">
 		</form>
 		`*/
-        //Change page title to product title
+        //Change page title to product title https://app.gumroad.com/follow_from_embed_form
         document.title = `${current["title"]} | Peter Till`;
         console.log(current["link"]);
 		content.innerHTML = 
@@ -43,7 +43,7 @@ import data from './products.json' assert { type: 'json' };
                         <p class="lead">${current["shortdesc"]}</p>
                         <div class="d-flex">
                         ${current["isfreebie"] ? `
-                        <form action="https://app.gumroad.com/follow_from_embed_form" method="post">
+                        <form action="${current["link"]}" method="post">
                         <div class="input-group mb-3">
                             <input type="hidden" name="seller_id" value="5953633473367"/>
                             <input class="form-control" type="email" placeholder="Your email address" name="email" value=""/>
