@@ -1,3 +1,5 @@
+<div id = "poof_wrapper">
+<div id = "poof_payment_modal"></div></div>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -45,17 +47,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
-    <!-- Clarity tracking code for https://petertill.tech/ -->
-    <script>
-      (function(c,l,a,r,i,t,y){
-          c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-          t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";
-          y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-      })(window, document, "clarity", "script", "hi53yf8r3v");
-    </script>
     <!-- poof -->
-    <script src="https://www.poof.io/static/api/checkout_v2.js"></script>
-    <script src="https://www.poof.io/static/api/sdk.js"></script>
+    <script src="https://www.poof.io/static/assets/js/jquery-3.6.0.js"></script>
+    <script defer src="https://www.poof.io/static/api/poof-payment-button.js"></script> 
     <!--STYLES-->
     <link rel="stylesheet" href="style.css">
 </head>
@@ -94,23 +88,18 @@
   </nav>
       <main id="content" class="container">
         <section class="py-5">
-          <div class="container px-4 px-lg-5 my-5">
-        <h1 class="text-center">Loading...</h1>
-        <p class="text-center">Please make sure that you have JavaScript enabled in your browser settings! This website relies on JS, so it cannot load the product properly without it!</p></div>
-      </section>
-        <!--section class="py-5">
             <div class="container px-4 px-lg-5 my-5">
                 <div class="row gx-4 gx-lg-5 align-items-center">
                     <div class="col-md-6"><img class="card-img-top mb-5 mb-md-0 product-img" src="./assets/products/java.jpg" alt="..."></div>
                     <div class="col-md-6">
-                        <div class="small mb-1">SKU: BST-498</div>
-                        <h1 class="display-5 fw-bolder">Shop item template</h1>
+                        <div class="small mb-1">Type: e-book</div>
+                        <h1 class="display-5 fw-bolder">Java Ebook</h1>
                         <div class="fs-5 mb-5">
-                            <span><s>$5.00</s> FREE</span>
+                            <span>5$</span>
                         </div>
-                        <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium at dolorem quidem modi. Nam sequi consequatur obcaecati excepturi alias magni, accusamus eius blanditiis delectus ipsam minima ea iste laborum vero?</p>
+                        <p class="lead">Short desc</p>
                         <div class="d-flex">
-                            <a class="gumroad-button" href="https://petertill.gumroad.com/l/java" data-gumroad-overlay-checkout="true">Get on</a>
+                            <a class="btn btn-primary" onclick="poof('596293974748')" id="poof_toggle">Get it</a>
                         </div>
                     </div>
                 </div>
@@ -118,45 +107,9 @@
         </section>
         <section>
           <h2>Description</h2>
-          <p>fdsfsd</p>
-        </section-->
+          <p>frfsdfsd</p>
+        </section>
       </main>
-      <a onclick="poof('596293974748')" id="poof_toggle">open modal</a>
-
-<div id = "poof_wrapper">
-<div id = "poof_payment_modal"></div></div>
-
-<script src="https://www.poof.io/static/assets/js/jquery-3.6.0.js"></script>
-<script src="https://www.poof.io/static/api/poof-payment-button.js"></script>
-      <script src="store.js" type="module"></script>
-      <script type="text/javascript">
-        function addToCart(slug) {
-
-//Get the cart items object
-var cartValue = sessionStorage.getItem("cart");
-var cartObj = JSON.parse(cartValue);
-
-//New product item
-var newItem = [{
-        slug: [slug, 1]
-    }];
-
-if(cartObj != null){
-
-cartObj.push(newItem);
-
-}else {
-    cartObj = newItem;
-}
-
-var jsonStr = JSON.stringify(cartObj);
-sessionStorage.setItem("cart", jsonStr);
-console.log("Added to cart");
-
-
-
-}
-      </script>
 </body>
 </html>
 
