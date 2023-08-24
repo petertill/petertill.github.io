@@ -52,7 +52,7 @@ import data from './products.json' assert { type: 'json' };
                             </div>
                         </div>
                         </form>
-                        `: `<a class="btn btn-primary" onclick="addToCart('${slug}');">Add to cart</a>`}
+                        `: `<a class="btn-btn-primary" onclick="poof('${current["poof"]}')" id="poof_toggle">open modal</a>`}
                         </div>
                     </div>
                 </div>
