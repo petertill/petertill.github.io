@@ -42,17 +42,17 @@ import data from './products.json' assert { type: 'json' };
                         </div>
                         <p class="lead">${current["shortdesc"]}</p>
                         <div class="d-flex">
-                        ${current["isfreebie"] ? `
-                        <form action="${current["link"]}" method="post">
-                        <div class="input-group mb-3">
-                            <input type="hidden" name="seller_id" value="5953633473367"/>
-                            <input class="form-control" type="email" placeholder="Your email address" name="email" value=""/>
-                            <div class="input-group-append">
-                                <button class="btn btn-primary" type="submit">Get it</button>
+                            ${current["soon"] ? `<div class="alert alert-warning" role="alert">You cannot get this product yet!</div>`:
+                            current["isfreebie"] ? `<form action="${current["link"]}" method="post">
+                            <div class="input-group mb-3">
+                                <input type="hidden" name="seller_id" value="5953633473367"/>
+                                <input class="form-control" type="email" placeholder="Your email address" name="email" value=""/>
+                                <div class="input-group-append">
+                                    <button class="btn btn-primary" type="submit">Get it</button>
+                                </div>
                             </div>
-                        </div>
-                        </form>
-                        `: `<a class="btn btn-primary" href="${current["cb"]}">Buy</a>`}
+                            </form>`: 
+                            `<a class="btn btn-primary" href="${current["cb"]}">Buy</a>`}
                         </div>
                     </div>
                 </div>
