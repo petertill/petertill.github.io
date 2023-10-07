@@ -1,0 +1,4 @@
+This is a Brave Creators publisher verification file.
+
+Domain: petertill.tech
+Token: 73668405850ad169dc63ed811d9edee381057222dc0f52f16f2a10967be76ef7
