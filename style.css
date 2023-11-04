@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=Ubuntu&display=swap');
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -10,16 +12,24 @@
 	--main-bg-color: brown;
 }
 body {
-    font-family: 'Roboto Mono', monospace;
+    font-family: 'IBM Plex Mono', monospace;
+    /*font-family: 'Ubuntu', sans-serif;*/
     background-color: #1E222D;
     color: white;
 }
 h2{
     color: #dd7732;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+h3 {
+    font-family: 'Ubuntu', sans-serif;
 }
 p, h3 {
     color: white;
 }
+
+
 
 section {
     margin-top: 10px;
@@ -53,8 +63,8 @@ h1 {
     width: fit-content;
 }
 .hero-img {
-    border-radius: 100%;
-    border: 5px solid white;
+    /*border-radius: 100%;
+    border: 5px solid white;*/
     width: 200px;
     height: auto;
 }
