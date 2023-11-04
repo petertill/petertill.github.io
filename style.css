@@ -17,6 +17,8 @@ body {
     background-color: #1E222D;
     color: white;
 }
+
+/* Text styles */
 h2{
     color: #dd7732;
     font-family: 'Ubuntu', sans-serif;
@@ -24,11 +26,17 @@ h2{
 
 h3 {
     font-family: 'Ubuntu', sans-serif;
-}
-p, h3 {
     color: white;
 }
 
+p {
+    color: white;
+}
+
+.text-outline {
+    color: #dd7732;
+    font-weight: bold;
+}
 
 
 section {
@@ -37,8 +45,9 @@ section {
 }
 
 .custom-navbar {
-    background-color: #011163 !important;
+    background-color: #1B223D !important;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif !important;
+    border-radius: 0px 0px 20px 20px;
 }
 .navbar-brand {
     color: #dd7732 !important;
@@ -48,6 +57,7 @@ section {
     height: 400px;
     background-color: #1B223D;
     padding-top: 70px;
+    border-radius: 0px 0px 20px 20px;
 }
 .main {
     padding-top: 70px;
