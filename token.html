@@ -93,7 +93,13 @@
                 <div class="col-md-6 order-2 order-sm-2 ">
                     <!-- Text -->
                     <h1 class="text-outline">TillCoin</h1>
-                    <p class="hero-prof h2 ">Invest in the future.</p>
+                    <p class="hero-prof h2 ">
+                      <span style="color: green;">
+                      <i class="fas fa-sort-up"></i> <!--down-->
+                      &nbsp;0.5 MATIC / 1 TCO
+                    </span>
+                    </p>
+                    
                     <!-- Add more content as needed -->
                 </div>
                 <div class="col-md-6 order-1 order-sm-1">
@@ -105,17 +111,14 @@
         </div>
       <!--/div-->
       <main class="container">
-        <div class="alert alert-success" role="alert">
-            TillCoin has a <strong>fixed price</strong> for now, which is <i>0.5 MATIC / 1 TCO</i>. We are asking the community whether they prefer a fixed price or a dynamic one.
-        </div>
         <section>
             <div class="row">
                 <div class="col-xs-12 text-center"><h2>What is TillCoin ($TCO)?</h2></div>
-                <div class="col-xs-12"><p>TillCoin $TCO is my own utility web3 token on the Polygon network. With this token, you can invest in me and support me while being cool among other people and accessing benefits/premium subscribtions in all of my projects. For absolutely free.</p></div>
+                <div class="col-xs-12"><p>TillCoin $TCO is my own utility web3 token on the Polygon network. With this token, you can invest in "me" while being cool among other people and accessing benefits/premium subscribtions in all of my projects. For lifetime as long as you own TCO.</p></div>
             </div>
             <div class="row d-flex align-items-center justify-content-center">
                 <div class="col-md-9 mb-15">
-                    <p>$TCO can be directly traded for $MATIC on the Polygon network, and it has a dynamic price because of its own market pool. The more people invest MATIC in TillCoin, the more your tokens will be worth when you sell them. How does it work and how can you support me with it? Think of it as a donation box. When you send MATIC to the TillCoin smart contract, you get a TCO token back. When you own one or some of these tokens, you get access to a lot of members' stuff, like free premium on <strong>all</strong> software that only I produce, and much more. When I create a new project and need funding, I take the right amount of matic out of this box and invest it in that project. All profits will be returned to the donation box, where you can redeem your MATIC tokens, which have grown in a better case. The other way to grow your MATIC via TillCoin is if more people invest in it, so the price of a TillCoin will go up and your tokens will be worth more!</p>
+                    <p>$TCO can be directly traded for $MATIC on the Polygon network back and forth, and it has a dynamic price because of its own market pool. The more people invest MATIC in TillCoin, the more your tokens will be worth when you sell them. How does it work and how can you support me with it? Think of it as a MATIC reserve. When you send MATIC to the TillCoin smart contract, you get a TCO token back. When you own one or some of these tokens, you get access to a lot of members' stuff, like free premium on <strong>all</strong> software that only I produce, and much more. When many people buys TCO and its supply grows, the MATIC reserve will hold more assets, and you can redeem your MATIC tokens + profit.</p>
                 </div>
                 <div class="col-md-3 d-flex align-items-center">
                     <img src="./assets/brand/token.png" alt="Profile picture" style="width: 201px;">
@@ -123,9 +126,60 @@
             </div>
         </section>
         <section>
+          <div class="row">
+              <div class="col-xs-12 text-center"><h2>Details (testnet)</h2></div>
+              <div class="col-xs-12"><p>🤫 Shhh! If you engage in testnet activities regarding our token, you may get an airdrop of real tokens in the future!</p></div>
+              <div class="col-xs-12"><p>
+                Network: <code>Sepolia</code><br>
+                Contract address: <code>0xeaC463632B0545b5A5462C436BF5C212B7bD822E</code><br>
+                Name: <code>TillCoin</code><br>
+                Symbol: <code>TCO</code><br>
+                Decimals: <code>18</code><br>
+              </p>
+              <button class="btn btn-primary" onclick="addToMetamask()">Add to Metamask</button>
+            </div>
+          </div>
+        </section>
+        <section>
+          <div class="row">
+            <div class="col-xs-12 text-center"><h2>Buy and sell TCO</h2></div>
+            <div class="row justify-content-center d-flex mx-auto">
+              <div class="card bg-dark p-2 col-auto flex-fill" style="width: 18rem;">
+                <div class="card-body">
+                  <h3 class="card-title">Buy TCO</h3>
+                  <label for="matic">Matic: </label>
+                  <div class="input-group mb-3">
+                    <input type="number" class="form-control" id="matic" placeholder="You pay..." aria-describedby="matic-inp"/><br>
+                    <div class="input-group-append">
+                      <span class="input-group-text" id="matic-inp">MATIC</span>
+                    </div>
+                  </div>
+                  You get: <span id="token"></span><br>
+                  <button class="btn btn-success mt-2">Buy TCO</button>
+                </div>
+              </div>
+              <div class="card bg-dark p-2 col-auto flex-fill" style="width: 18rem;">
+                <div class="card-body">
+                  <h3 class="card-title">Sell TCO</h3>
+                  <label for="matic">Matic: </label>
+                  <div class="input-group mb-3">
+                    <input type="number" class="form-control" id="matic" placeholder="You pay..." aria-describedby="tco-inp"/><br>
+                    <div class="input-group-append">
+                      <span class="input-group-text" id="tco-inp">TCO</span>
+                    </div>
+                  </div>
+                  You get back: <span id="token"></span><br>
+                  <button class="btn btn-danger mt-2">Sell TCO</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        </section>
+        <section>
             <div class="row">
-                <div class="col-xs-12 text-center"><h2>Are there risks?</h2></div>
-                <div class="col-xs-12"><p>Yes, there are, but it is very small. You can lose MATIC if everyone sells their TillCoin and its value decreases, or if my project has not recovered the value of the MATIC taken out. In this case, you can still enjoy the benefits of owning TillCoin regardless of value. It's worth considering that this is just a supporter and fan utility token for fun that you can use to buy a crypto "stock" from my life. <strong>This is not investment advice and profits are not guaranteed.</strong></p></div>
+                <div class="col-xs-12 text-center"><h2>Is there risk?</h2></div>
+                <div class="col-xs-12"><p>Yes, but it is very small. You can lose MATIC if everyone sells their TillCoin and its value decreases. In this case, you can still enjoy the benefits of owning TillCoin regardless of value. It's worth considering that this is just a supporter and fan utility token for fun that you can use to buy a crypto "stock" from my life. <strong>This is not investment advice and profits are not guaranteed.</strong></p></div>
             </div>
         </section>
         <section>
@@ -207,5 +261,6 @@
         </div>
         <!-- Copyright -->
       </footer>
+      <script src="./web3.js" type="text/javascript"></script>
 </body>
 </html>
