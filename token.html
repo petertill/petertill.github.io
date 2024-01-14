@@ -32,6 +32,8 @@
     <!-- SCRIPTS -->
     <!-- fontawesome -->	
     <script src="https://kit.fontawesome.com/d9ec437633.js" crossorigin="anonymous"></script>
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-DMVQ4ZX9YS"></script>
     <script>
@@ -147,29 +149,29 @@
               <div class="card bg-dark p-2 col-auto flex-fill" style="width: 18rem;">
                 <div class="card-body">
                   <h3 class="card-title">Buy TCO</h3>
-                  <label for="matic">Matic: </label>
+                  <label for="b-tco">Tco: </label>
                   <div class="input-group mb-3">
-                    <input type="number" class="form-control" id="matic" placeholder="You pay..." aria-describedby="matic-inp"/><br>
+                    <input type="number" class="form-control" id="b-tco" placeholder="You want..." /><br>
                     <div class="input-group-append">
-                      <span class="input-group-text" id="matic-inp">MATIC</span>
+                      <span class="input-group-text" id="matic-inp">TCO</span>
                     </div>
                   </div>
-                  You get: <span id="token"></span><br>
-                  <button class="btn btn-success mt-2">Buy TCO</button>
+                  You pay: <span id="s-matic"></span> MATIC<br>
+                  <button class="btn btn-success mt-2" onclick="buyTokens()">Buy TCO</button>
                 </div>
               </div>
               <div class="card bg-dark p-2 col-auto flex-fill" style="width: 18rem;">
                 <div class="card-body">
                   <h3 class="card-title">Sell TCO</h3>
-                  <label for="matic">Matic: </label>
+                  <label for="s-tco">Tco: </label>
                   <div class="input-group mb-3">
-                    <input type="number" class="form-control" id="matic" placeholder="You pay..." aria-describedby="tco-inp"/><br>
+                    <input type="number" class="form-control" id="s-tco" placeholder="You sell..."/><br>
                     <div class="input-group-append">
                       <span class="input-group-text" id="tco-inp">TCO</span>
                     </div>
                   </div>
-                  You get back: <span id="token"></span><br>
-                  <button class="btn btn-danger mt-2">Sell TCO</button>
+                  You get back: <span id="g-matic"></span> MATIC<br>
+                  <button class="btn btn-danger mt-2" onclick="sellTokens()">Sell TCO</button>
                 </div>
               </div>
             </div>
@@ -261,6 +263,7 @@
         </div>
         <!-- Copyright -->
       </footer>
+      <script src="https://cdn.ethers.io/lib/ethers-5.7.2.umd.min.js" type="application/javascript"></script>
       <script src="./web3.js" type="text/javascript"></script>
 </body>
 </html>
