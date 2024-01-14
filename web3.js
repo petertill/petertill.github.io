@@ -592,7 +592,7 @@ async function buyTokens() {
     const valueInWei = ethers.utils.parseEther(token*price);
   
     const transaction = await Contract.buyTokens(parseInt(token), {
-      value: valueInWei,
+      value: valueInWei.toString(),
       gasLimit: 9000000,
     });
     await transaction.wait();
