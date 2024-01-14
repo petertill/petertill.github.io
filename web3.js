@@ -589,7 +589,7 @@ $('#b-tco').on('input', async function(e){
 async function buyTokens() {
     const price = await fetchPrice();
     const token = $("#b-tco").val();
-    const valueInWei = ethers.utils.parseEther(str(token*price));
+    const valueInWei = ethers.utils.parseEther((token*price).toString());
   
     const transaction = await Contract.buyTokens(parseInt(token), {
       value: valueInWei,
