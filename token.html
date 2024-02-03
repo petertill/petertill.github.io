@@ -30,6 +30,8 @@
     <meta property="twitter:description" content="I'm Peter, an average guy who programs as a hobby and is preparing for his profession. I spend my free time with developing applications for mobile & desktop">
     <meta property="twitter:image" content="https://metatags.io/assets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png">
     <!-- SCRIPTS -->
+    <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@observablehq/plot@0.6"></script>
     <!-- fontawesome -->	
     <script src="https://kit.fontawesome.com/d9ec437633.js" crossorigin="anonymous"></script>
     <!-- JQuery -->
@@ -176,13 +178,17 @@
               </div>
             </div>
           </div>
-        </div>
+          <div class="row">
+            <div class="col-xs-12 text-center"><h2>Buy and sell TCO</h2></div>
+          </div>
+          <div id="chart"></div>
         </section>
         <section>
             <div class="row">
                 <div class="col-xs-12 text-center"><h2>Is there risk?</h2></div>
                 <div class="col-xs-12"><p>Yes, but it is very small. You can lose MATIC if everyone sells their TillCoin and its value decreases. In this case, you can still enjoy the benefits of owning TillCoin regardless of value. It's worth considering that this is just a supporter and fan utility token for fun that you can use to buy a crypto "stock" from my life. <strong>This is not investment advice and profits are not guaranteed.</strong></p></div>
             </div>
+            
         </section>
         <section>
             <div class="row">
@@ -265,5 +271,100 @@
       </footer>
       <script src="https://cdn.ethers.io/lib/ethers-5.7.2.umd.min.js" type="application/javascript"></script>
       <script src="./web3.js" type="text/javascript"></script>
+      <script type="text/javascript">
+        const months = [
+            "January", "February", "March", "April", "May", "June",
+            "July", "August", "September", "October", "November", "December"
+        ];
+    
+        // Convert months to Date objects for sorting
+        const sortedMonths = months.map(month => new Date(`2022-${month}-01`));
+    
+        // Initialize an empty array for prices
+        const prices = [];
+
+        prices.push({
+            month: sortedMonths[0],
+            price: 0.5,
+            color: "blue"
+        });
+
+        
+        //generate exponential prices from the second moth
+        /*for (let i = 1; i < sortedMonths.length; i++) {
+            const price = prices[i-1].price * 1.8;
+            const color = i > 0 ? (prices[i - 1].price < price ? "green" : "red") : "blue";
+    
+            prices.push({
+                month: sortedMonths[i],
+                price: price,
+                color: color
+            });
+        }
+
+        prices[prices.length-1] = {
+            month: sortedMonths[sortedMonths.length-1],
+            price: 1,
+            color: "red"
+        };*/
+        
+
+    
+        // Generate random prices and colors from the second month
+        for (let i = 0; i < sortedMonths.length-1; i++) {
+            const price = Math.random() * 1;
+            const color = i > 0 ? (prices[i - 1].price < price ? "green" : "red") : "blue";
+    
+            prices.push({
+                month: sortedMonths[i],
+                price: price,
+                color: "gray"
+            });
+        }
+
+        //remove duplicates
+        prices.splice(1, 1);
+    
+        const plot = Plot.plot({
+            x: {
+                grid: true,
+                ticks: sortedMonths,
+                label: "Month",
+                tickFormat: date => date.toLocaleString('default', { month: 'long' }), // Format tick labels
+                style: {
+                    axis: {stroke: 'blue'}, // X-axis color
+                    ticks: {stroke: 'blue'} // X-axis ticks color
+                }
+            },
+            y: {
+                grid: true,
+                label: "Price",
+                style: {
+                    axis: {stroke: 'red'}, // Y-axis color
+                    ticks: {stroke: 'red'} // Y-axis ticks color
+                }
+            },
+            marks: [
+                Plot.ruleY([0]),
+                Plot.barY(prices, { x: "month", y: "price", fill: "color" }),
+                Plot.crosshair(prices, {x: "month", y: "price"})
+            ],
+            events: {
+            hover: (event, plot) => {
+                const values = plot.hover.points.map(point => ({
+                    month: point.data.month.toLocaleString('default', { month: 'long' }),
+                    price: point.data.price.toFixed(2)
+                }));
+
+                // Display values in a tooltip or console
+                console.log(values);
+            },
+            tip: true
+        }
+        });
+    
+        const div = document.querySelector("#chart");
+        div.append(plot);
+    </script>
 </body>
 </html>

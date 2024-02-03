@@ -140,3 +140,14 @@ dialog::backdrop {
 table {
     color: white;
 }
+
+svg {
+    width: 100%;
+    
+}
+
+text {
+    color: lightgrey !important;
+    stroke: none !important;
+    
+}
