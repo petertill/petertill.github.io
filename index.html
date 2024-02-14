@@ -1,14 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html data-bs-theme="light" lang="en">
+
 <head>
+    <meta name="theme-color" content="#1E222D">
+    <link rel="canonical" href="https://petertill.github.io/">
+    <script type="application/ld+json">
+        {
+            "@context": "http://schema.org",
+            "@type": "WebSite",
+            "name": "Peter Till | Software Engineer",
+            "url": "https://petertill.github.io/"
+        }
+    </script>
+
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="manifest" href="manifest.json" crossorigin="use-credentials">
+    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/css/bs-theme-overrides.css">
+    <link rel="stylesheet" href="assets/css/aos.min.css">
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <link rel="stylesheet" href="assets/css/Navbar-Right-Links-Dark-icons.css">
+    <link rel="stylesheet" href="assets/css/Testimonials-images.css">
+
+
+    <!-- OLD -->
     <!-- SEO -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <!-- outer -->
-    <title>Peter Till | Software Engineer</title>
-    <link rel="icon" type="image/png" href="./assets/brand/logo.png" />
-    <link rel="apple-touch-icon" sizes="180x180" href="./assets/brand/logo.png">
     <!-- Primary Meta Tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Peter Till | Software Engineer</title>
+    <link rel="icon" type="image/png" href="./assets/img/brand/logo.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/img/brand/logo.png">
+    
     <meta name="title" content="Peter Till | Software Engineer">
     <meta name="description" content="I'm Peter, an average guy who programs as a hobby and is preparing for his profession. I spend my free time with developing applications for mobile & desktop">
     <meta name="keywords" content="software,engineer,petertill,Peter Till, Till Peter, Till Péter,freelancer">
@@ -18,459 +41,385 @@
     <meta name="author" content="Peter Till">
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://metatags.io/">
+    <meta property="og:url" content="https://petertill.github.io/">
     <meta property="og:title" content="Peter Till | Software Engineer">
     <meta property="og:description" content="I'm Peter, an average guy who programs as a hobby and is preparing for his profession. I spend my free time with developing applications for mobile & desktop">
     <meta property="og:image" content="https://petertill.github.io/assets/brand/logo.png">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://metatags.io/">
+    <meta property="twitter:url" content="https://petertill.github.io/">
     <meta property="twitter:title" content="Peter Till | Software Engineer">
     <meta property="twitter:description" content="I'm Peter, an average guy who programs as a hobby and is preparing for his profession. I spend my free time with developing applications for mobile & desktop">
     <meta property="twitter:image" content="https://petertill.github.io/assets/brand/logo.png">
-    <!-- SCRIPTS -->
-    <!-- fontawesome -->	
+    <!-- PWA -->
+    <link rel="manifest" href="manifest.json" crossorigin="use-credentials">
+    
+    
+    <!-- LOADS -->
+    <!-- styles -->
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <script src="https://kit.fontawesome.com/d9ec437633.js" crossorigin="anonymous"></script>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DMVQ4ZX9YS"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+    <link rel="stylesheet" href="assets/css/bs-theme-overrides.css">
+    <link rel="stylesheet" href="assets/css/aos.min.css">
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <link rel="stylesheet" href="assets/css/Navbar-Right-Links-Dark-icons.css">
+    <link rel="stylesheet" href="assets/css/Testimonials-images.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <!-- fontawesome -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
-    gtag('config', 'G-DMVQ4ZX9YS');
-    </script>
-    <!--bootstrap-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-
-    <!-- Clarity tracking code for https://petertill.tech/ -->
-    <script>
-        (function(c,l,a,r,i,t,y){
-            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";
-            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-        })(window, document, "clarity", "script", "hi53yf8r3v");
-    </script>
-    <!--STYLES-->
-    <link rel="stylesheet" href="style.css">
+    <script src="./assets/js/email.js"></script>
+    
+    <!--link rel="stylesheet" href="style.css"-->
 </head>
+
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark custom-navbar p-10 fixed-top">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="./index.html">
-            <img src="./assets/brand/logo.png" alt="Logo" width="40" height="40" class="d-inline-block align-text-top">
-            Peter Till
-          </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <!--span class="navbar-toggler-icon">re</span-->
-            <span class="" role="button" ><i class="fas fa-code-branch" aria-hidden="true" style="color:#e6e6ff"></i></span>
-          </button>
-          <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="./index.html"><i class="fas fa-igloo"></i> Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="https://petertill.substack.com/"><i class="fas fa-envelope"></i> Newsletter</a>
-              </li>
-              <!--li class="nav-item">
-                <a class="nav-link" href="./token.html">TillCoin</a>
-              </li--><!--.disabled to disable-->
-              <!--li class="nav-item">
-                <a class="nav-link" href="./cart.html"><i class="fas fa-shopping-cart"></i> <span class="badge badge-danger bg-danger px-1">
-                    <script>
-                        var cart = JSON.parse(sessionStorage.getItem("cart"));
-                        if(cart != null){document.write(Object.keys(cart).length);}else{document.write("0");}
-                    </script>
-                </span></a>
-              </li-->
-            </ul>
-          </div>
+    <nav class="navbar navbar-expand-md sticky-top bg-light py-3" style="background: var(--bs-light);border-radius: 0px;border-bottom-right-radius: 20px;border-bottom-left-radius: 20px;" data-bs-theme="dark">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="./index.html">
+                <img width="40" height="40" src="assets/img/brand/logo.png">
+                <span style="color: var(--bs-primary);font-size: 30px;margin-left: 10px; font-weight: 900;">Peter Till</span>
+            </a>
+            <button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-5"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navcol-5">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item d-flex align-items-center">
+                        <a class="nav-link active" href="./index.html"><i class="fas fa-igloo"></i> Home</a>
+                    </li>
+                    <li class="nav-item d-flex align-items-center">
+                        <a class="nav-link" href="#"><i class="fas fa-envelope"></i> Newsletter</a>
+                    </li>
+                    <li class="nav-item d-flex align-items-center">
+                        <a class="nav-link" href="./projects.html">
+                            <i>
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M16 7V10C16 13.314 12.4182 15 8 15C3.66036 15 0.128 13.409 0.00363636 10.177L0 10V7C0 10.313 3.58182 13 8 13C12.4182 13 16 10.313 16 7ZM8 0C12.4182 0 16 2.686 16 6C16 9.313 12.4182 12 8 12C3.58182 12 0 9.313 0 6C0 2.686 3.58182 0 8 0ZM3 2L8 3L13 2L12 3L8 4L4 3L3 2ZM7.5 5H8.5V9L8 10L7.5 9V5Z" />
+                                </svg>
+                            </i>
+                            TillCoin
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
         </div>
-      </nav>
-      <!--div class="hero w-100 h-100"-->
-      <div class="container-fluid hero px-0">
-            <div class="row w-100 mx-0 h-100 d-flex align-items-center justify-content-center">
-                <div class="col-md-6 order-2 order-sm-2 ">
-                    <!-- Text -->
-                    <h1 class="">Hi, I'm <span class="text-outline">Peter Till</span></h1>
-                    <p class="hero-prof h2 ">Software Engineer</p>
-                    <!-- Add more content as needed -->
+    </nav>
+    <div class="container-fluid py-4 py-xl-5" style="background: #1B223D;">
+        <div class="row gy-4 gy-md-0">
+            <div class="col-md-6">
+                <div class="p-xl-5 m-xl-5"><img class="rounded img-fluid w-100 fit-cover" style="min-height: 300px;" src="./assets/img/3d/laptop.png"></div>
+            </div>
+            <div class="col-md-6 text-center text-md-start d-flex d-sm-flex d-md-flex justify-content-center align-items-center justify-content-md-start align-items-md-center justify-content-xl-center">
+                <div style="max-width: 350px;">
+                    <h2 class="text-uppercase fw-bold">Hi, I'm <span style="color: rgb(221, 119, 50);">Peter Till</span><strong>!</strong></h2>
+                    <p class="my-3">An enthusiastic software developer from Hungary</p><a class="btn btn-primary btn-lg me-2" role="button" href="#">Button</a><a class="btn btn-outline-primary btn-lg" role="button" href="#">Button</a>
                 </div>
-                <div class="col-md-6 order-1 order-sm-1">
-                  <!-- Image -->
-                  <!--img src="path/to/image.jpg" alt="Hero Image" class="img-fluid"-->
-                  <img class="hero-img d-block mx-auto" src="./assets/images/3diconslaptop.png" alt="Profile picture">
-                </div>
-              </div>
+            </div>
         </div>
-      <!--/div-->
-      <main class="container">
-        <div class="alert alert-danger" role="alert">
-          <strong>We have sad news.</strong> Our website will no longer be available at <i>petertill.tech</i> starting from November 24th as our current domain registrar is not so awesome... The website will still be available at <a href="https://petertill.github.io/">petertill.github.io</a> or an other domain. Sorry for the inconvenience!
-        </div>
-        <section>
-            <div class="row">
-                <div class="col-xs-12 text-center"><h2>About Me</h2></div>
-                <div class="col-xs-12"><p>It's fitting that you know who I really am. I'm trying to describe my early years as a software developer and where I am now. I don't like writing long novels, so you can find more important information further down this page.</p></div>
-            </div>
-            <div class="row d-flex align-items-center justify-content-center">
-                <div class="col-md-9 mb-15">
-                    <p>Hi! Let me introduce myself! My name is Peter Till and I am a Hungarian software developer. Currently, I still write software as a hobby. I first encountered software development when I read that Facebook was also written in PHP. I even created my own social media page, with almost 0 knowledge, but over time I gained more and more useful knowledge. After that, I started learning other programming languages, such as C# and Python. I wrote some programs to automate simpler operations, and I started delving into different programming languages ​​and technologies. I also coded a few things for my friends. One of my projects was a Discord bot for our community that had a points system, dungeon commands, and a lot of important features needed for an RPG. Recently, I have also started developing mobile applications and machine learning models. I created CodersCoin, a cryptocurrency within Github for developers only. I still had a lot of projects, because I always have the desire to create something new and fantastic and naturally improve in the process. Obviously I won't describe them, because my introduction would be long, but my larger projects are on my portfolio page, in the projects section. I am now a pro at many things, although I still have room for improvement.</p>
-                </div>
-                <div class="col-md-3 d-flex align-items-center">
-                    <img src="./assets/brand/logo.png" alt="Profile picture" style="width: 201px;">
-                </div>
-            </div>
-        </section>
-        <section>
-            <div class="row">
-                <div class="col-xs-12 text-center"><h2>What do I actually create</h2></div>
-                <div class="col-xs-12 text-center"><p>During my projects, I used a lot of technologies and frameworks, so I gained a lot of experience in software development, on almost every platform and branch. I have mainly been dealing with these recently:</p></div>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-auto mb-5">
-                    <div class="text-center">
-                        <!--div class="card-icon"><i class="fas fa-mobile fa-3x yellow" aria-hidden="true" style="color: greenyellow;"></i></div-->
-                        <img src="./assets/images/3diconsphone.png" alt="Phone graphics" width="100" height="100" style="object-fit: contain; margin-bottom: 10px; margin-top: 10px;">
-                        <h3>Mobile</h3>
-                    </div>
-                    <ul>
-                        <li>Java</li>
-                        <li>Firebase</li>
-                    </ul>
-                </div>
-                <div class="col-auto mb-5">
-                    <div class="text-center">
-                      <img src="./assets/images/3diconslaptop.png" alt="Desktop graphics" width="100" height="100" style="object-fit: contain; margin-bottom: 10px; margin-top: 10px;">
-                        <h3>Desktop</h3>
-                    </div>
-                    <ul>
-                        <li>C# (.NET framework)</li>
-                        <li>API requests</li>
-                    </ul>
-                </div>
-                <div class="col-auto mb-5">
-                    <div class="text-center">
-                      <img src="./assets/images/3diconspuzzle.png" alt="Puzzle graphics" width="100" height="100" style="object-fit: contain; margin-bottom: 10px; margin-top: 10px;">
-                        <h3>API</h3>
-                    </div>
-                    <ul>
-                        <li>Crawling</li>
-                        <li>Custom API endpoints</li>
-                        <li>Automatization with crawling</li>
-                    </ul>
-                </div>
-                <div class="col-auto mb-5">
-                    <div class="text-center">
-                      <img src="./assets/images/3diconscog.png" alt="Cog graphics" width="100" height="100" style="object-fit: contain; margin-bottom: 10px; margin-top: 10px;">
-                        <h3>ML & AI</h3>
-                    </div>
-                    <ul>
-                        <li>Linear regression</li>
-                        <li>Image classification</li>
-                    </ul>
-                </div>
-                <div class="col-auto mb-5">
-                    <div class="text-center">
-                      <img src="./assets/images/3diconslink.png" alt="Link graphics" width="100" height="100" style="object-fit: contain; margin-bottom: 10px; margin-top: 10px;">
-                        <h3>Website</h3>
-                    </div>
-                    <ul>
-                        <li>Backend development</li>
-                        <li>Frontend development</li>
-                    </ul>
-                </div>
-                <div class="col-auto mb-5">
-                  <div class="text-center">
-                    <img src="./assets/images/3diconseth.png" alt="Ethereum graphics" width="100" height="100" style="object-fit: contain; margin-bottom: 10px; margin-top: 10px;">
-                      <h3>Web3</h3>
-                  </div>
-                  <ul>
-                      <li>Blockchains</li>
-                      <li>ERC20 tokens</li>
-                      <li>ETH smart contracts</li>
-                  </ul>
-              </div>
-            </div>
-        </section>
-        <section>
-            <div class="row">
-                <div class="col-xs-12 text-center"><h2>My projects</h2></div>
-                <div class="col-xs-12 text-center"><p>I constantly like to try new frameworks or technologies, so I'm working on something every second. These are my bigger or more famous projects that I created in my spare time. Some of my projects have developed their own user base and community, which gives me great pleasure. I always like to create some useful software.</p></div>
-            </div><!--Images should be 300x220px-->
-            <div class="row justify-content-center">
-                <div class="col-sm-3 mb-5" style="width: 20rem;">
-                    <div class="card bg-dark p-2">
-                        <img class="card-img-top img-fluid mb-2" src="./assets/images/csc.png" alt="Card image cap">
-                        <div class="card-block">
-                            <h4 class="card-title">CodersCoin</h4>
-                            <p class="card-text">CodersCoin is a cryptocurrency for developers, designers and IT enthusiasts.</p>
-                            <button onclick="csc.showModal()" class="btn btn-primary">Try CodersCoin</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-3 mb-5" style="width: 20rem;">
-                    <div class="card bg-dark p-2">
-                        <img class="card-img-top img-fluid mb-2" src="./assets/images/fmode.png" alt="Card image cap">
-                        <div class="card-block">
-                            <h4 class="card-title">FocusMode</h4>
-                            <p class="card-text">A powerful productivity tool that blocks distracting websites while in a work mode.</p>
-                            <button onclick="fmode.showModal()" class="btn btn-primary">Try FocusMode</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section>
-            <div class="row">
-                <div class="col-xs-12 text-center"><h2>My Socials</h2></div>
-                <div class="col-xs-12 text-center"><p>My goal is to share knowledge and produce content in the field of programming and IT. I often post infographics, development stories, behind the scenes details and the latest projects on my social media pages. My articles posted on Medium can also be found on my blog. Feel free to follow or connect me on these platforms, I like to meet like-minded people.</p></div>
-            </div>
-            <div class="text-center">
-                <a class="btn btn-third mb-2" style="background-color: #55acee;" href="https://twitter.com/ptertill/" target="_blank" role="button">
-                    <i class="fab fa-twitter me-2"></i>Twitter
-                </a>
-                <a class="btn btn-third mb-2" style="background-color: red;" href="https://www.youtube.com/@petrtill" target="_blank" role="button">
-                    <i class="fab fa-youtube me-2"></i>YouTube
-                </a>
-                <a class="btn btn-third mb-2" style="background-color: black;" href="https://petertill.medium.com/" target="_blank" role="button">
-                    <i class="fab fa-medium me-2"></i>Medium
-                </a>
-                <a class="btn btn-third mb-2" style="background-color: orange;" href="https://stackoverflow.com/users/19659146/peter-till" target="_blank" role="button">
-                    <i class="fab fa-stack-overflow me-2"></i>Stack Overflow
-                </a>
-                <a class="btn btn-third mb-2" style="background-color: black;" href="https://github.com/petertill" target="_blank" role="button">
-                    <i class="fab fa-github me-2"></i>Github
-                </a>
-                <a class="btn btn-third mb-2" style="background-color: blue;" href="https://www.linkedin.com/in/ptertill/" target="_blank" role="button">
-                    <i class="fab fa-linkedin me-2"></i>LinkedIn
-                </a>
-                <a class="btn btn-third mb-2" style="background-color: orchid;" href="https://instagram.com/ptertill/" target="_blank" role="button">
-                    <i class="fab fa-instagram me-2"></i>Instagram
-                </a>
-            </div>
-             
-        </section>
-        <section>
-            <div class="row">
-                <div class="col-xs-12 text-center"><h2>Certificates</h2></div>
-                <div class="col-xs-12 text-center"><p>SOON</p></div>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-sm-3 mb-5">
-                    <div class="card bg-dark p-2">
-                        <div class="card-body">
-                          <div class="row align-items-center">   
-                            <h5 class="card-title">JavaScript Algorithms and Data Structures</h5>
-                            <span class="text-muted"><i class="fab fa-free-code-camp"></i> freeCodeCamp</span>
-                            <p class="card-text">Issue Date: <span class="issue-date">Apr 2023</span></p>
-                            <div class="text-center">
-                                <a href="https://freecodecamp.org/certification/petertill/javascript-algorithms-and-data-structures" class="btn btn-primary">View Certificate</a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                </div>
-                <div class="col-sm-3 mb-5">
-                    <div class="card bg-dark p-2">
-                        <div class="card-body">
-                          <div class="row align-items-center">
-                            <h5 class="card-title">Responsive Web Design</h5>
-                            <span class="text-muted"><i class="fab fa-free-code-camp"></i> freeCodeCamp</span>
-                            <p class="card-text">Issue Date: <span class="issue-date">Feb 2023</span></p>
-                            <div class="text-center">
-                                <a href="https://freecodecamp.org/certification/petertill/responsive-web-design" class="btn btn-primary">View Certificate</a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                </div>
-                <div class="col-sm-3 mb-5">
-                    <div class="card bg-dark p-2">
-                        <div class="card-body">
-                          <div class="row align-items-center">
-                            <h5 class="card-title">The Fundamentals of Digital Marketing</h5>
-                            <span class="text-muted"><i class="fab fa-google"></i> Google Digital Garage</span>
-                            <p class="card-text">Issue Date: <span class="issue-date">May 22, 2023</span></p>
-                            <p class="card-text">ID: <code>SGH 8LD T6L</code></p>
-                            <div class="text-center">
-                                <a href="https://learndigital.withgoogle.com/link/1qsdpcedm9s" class="btn btn-primary">View Certificate</a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                </div>
-            </div>
-        </section>
-        <section>
-            <div class="row">
-                <div class="col-xs-12 text-center"><h2>What other people said</h2></div>
-                <div class="col-xs-12 text-center"><p>I've already worked with a few people and asked them for their input. I have also asked some of my software users or friends that I've worked with on a cool project. Their feedback means a lot to me.</p></div>
-            </div>
-            <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel" style="max-width: 400px; margin: 0 auto;">
-                <div class="carousel-inner">
-                  <div class="carousel-item active">
-                    <div class="card bg-dark">
-                      <div class="card-body">
-                        <div class="testimonial">
-                          <div class="testimonial-author">
-                            <img src="./assets/images/haycat.png" alt="Profile Image" class="testimonial-avatar d-inline-block" width="50" height="50" style="vertical-align:middle; border-radius: 100%;">
-                            <div class="author-details d-inline-block" style="vertical-align:middle;">
-                              <h5 class="author-name">haycat</h5>
-                              <span class="author-designation">Client</span>
-                            </div>
-                          </div>
-                          <i class="fas fa-star" style="color: #fbff00;"></i>
-                            <i class="fas fa-star" style="color: #fbff00;"></i>
-                            <i class="fas fa-star" style="color: #fbff00;"></i>
-                            <i class="fas fa-star" style="color: #fbff00;"></i>
-                            <i class="fas fa-star" style="color: #fbff00;"></i>
-                          <div class="testimonial-text">
-                            <p>Amazing and easy to work with</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="carousel-item">
-                    <div class="card bg-dark">
-                      <div class="card-body">
-                        <div class="testimonial">
-                          <div class="testimonial-author">
-                            <img src="./assets/images/haycat.png" alt="Profile Image" class="testimonial-avatar d-inline-block" width="50" height="50" style="vertical-align:middle; border-radius: 100%;">
-                            <div class="author-details d-inline-block" style="vertical-align:middle;">
-                              <h5 class="author-name">hazer</h5>
-                              <span class="author-designation">Client</span>
-                            </div>
-                          </div>
-                          <i class="fas fa-star" style="color: #fbff00;"></i>
-                            <i class="fas fa-star" style="color: #fbff00;"></i>
-                            <i class="fas fa-star" style="color: #fbff00;"></i>
-                            <i class="fas fa-star" style="color: #fbff00;"></i>
-                            <i class="fas fa-star" style="color: #fbff00;"></i>
-                          <div class="testimonial-text">
-                            <p>Indeed he is good. 
-                            I worked with him</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  No reviews yet.
-                  <!-- Add more carousel items as needed -->
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Next</span>
-                </button>
-              </div>
-            
-        </section>
-        <section>
-            <div class="row">
-                <div class="col-xs-12 text-center"><h2>Ebooks</h2></div>
-                <div class="col-xs-12 text-center"><p>Name of Section</p></div>
-            </div>
-                <div class="row justify-content-center">
-                    <div class="col-sm-3 mb-5" style="width: 15rem;">
-                        <div class="card bg-dark p-2">
-                            <img class="card-img-top img-fluid" src="./assets/products/java.jpg" style="object-fit: contain;" width="286" height="180" alt="Card image cap">
-                            <div class="card-block">
-                                <h4 class="card-title">The basics of Java programming</h4>
-                                <p class="card-text">FREE</p>
-                                <a href="https://store.petertill.tech/l/java" class="btn btn-primary">View</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-3 mb-5" style="width: 15rem;">
-                        <div class="card bg-dark p-2">
-                            <img class="card-img-top img-fluid" src="./assets/products/python.png" style="object-fit: contain;" width="286" height="180" alt="Card image cap">
-                            <div class="card-block">
-                                <h4 class="card-title">Python for Beginners</h4>
-                                <p class="card-text">FREE</p>
-                                <a href="./product.html" class="btn btn-primary disabled">View</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-3 mb-5" style="width: 15rem;">
-                        <div class="card bg-dark p-2">
-                            <img class="card-img-top img-fluid" src="./assets/products/hacking.png" style="object-fit: contain;" width="286" height="180" alt="Card image cap">
-                            <div class="card-block">
-                                <h4 class="card-title">The basics of hacking & cybersecurity</h4>
-                                <p class="card-text">FREE</p>
-                                <a href="./product.html" class="btn btn-primary disabled">View</a>
-                            </div>
-                        </div>
-                    </div>               
-                </div>
-        </section>
-      </main>
-      <dialog id="csc" class="container">
+    </div>
+    <div class="container" data-aos="fade-up">
         <div class="row">
-            <div class="col-sm">
-                <h2>CodersCoin</h2>
-                <p>CodersCoin is a unique and completely proprietary blockchain and cryptocurrency technology developed by Peter Till. CodersCoin serves as a kind of reputation and credit for programmers, designers, and computer enthusiasts. The goal of the development is to provide a simple platform for digital creators to pay themselves without the intervention of any banks or governments. In addition, digital files can be sent securely. No separate app needed, just a Github account. With CodersCoin you can empower your community with fast and secure transactions or support your favorite open source projects.</p>
+            <div class="col-md-6">
+                <h1>About Me</h1>
+                <p>It's fitting that you know who I really am. I'm trying to describe my early years as a software developer and where I am now. I don't like writing long novels, so you can find more important information further down this page.<br>Hi! Let me introduce myself! My name is Peter Till and I am a Hungarian software developer. Currently, I still write software as a hobby. I first encountered software development when I read that Facebook was also written in PHP. I even created my own social media page, with almost 0 knowledge, but over time I gained more and more useful knowledge. After that, I started learning other programming languages, such as C# and Python. I wrote some programs to automate simpler operations, and I started delving into different programming languages ​​and technologies. I also coded a few things for my friends. One of my projects was a Discord bot for our community that had a points system, dungeon commands, and a lot of important features needed for an RPG. Recently, I have also started developing mobile applications and machine learning models. I created CodersCoin, a cryptocurrency within Github for developers only. I still had a lot of projects, because I always have the desire to create something new and fantastic and naturally improve in the process. Obviously I won't describe them, because my introduction would be long, but my larger projects are on my portfolio page, in the projects section. I am now a pro at many things, although I still have room for improvement.</p>
             </div>
-            <div class="col-sm">
-                <table class="table" style="color: white;">
-                    <thead></thead>
-                    <tr>
-                        <td>Technology</td>
-                        <td>NodeJS, Express.js, MongoDB</td>
-                    </tr>
-                    <tr>
-                        <td>Time to create</td>
-                        <td>Less than a week</td>
-                    </tr>
-                    <tr>
-                        <td>Website</td>
-                        <td><a href="https://coderscoin.github.io/?utm_source=portfolio&utm_medium=project&utm_campaign=popup">Website</a></td>
-                    </tr>
-                </table>
+            <div class="col-md-6"><img src="assets/img/%7B%20(1).png" width="100%" height="100%"></div>
+        </div>
+    </div>
+    <div class="container py-4 py-xl-5" data-aos="fade-up">
+
+        <div class="row mb-5">
+            <div class="col-md-8 col-xl-6 text-center mx-auto">
+                <h2>What do I actually create</h2>
+                <p class="text-start w-lg-50">During my projects, I used a lot of technologies and frameworks, so I gained a lot of experience in software development, on almost every platform and branch. I have mainly been dealing with these recently:</p>
             </div>
         </div>
-        <button class="btn btn-primary" onclick="csc.close()">Close</button><!--Or from with dialog method-->
-      </dialog>
-      <dialog id="fmode" class="container">
+
+        <div class="row gy-4 row-cols-2 row-cols-md-4 justify-content-center">
+            <div class="col" data-bss-disabled-mobile="true" data-bss-hover-animate="tada">
+                <div class="text-center d-flex flex-column justify-content-center align-items-center py-3">
+                    <div class="bs-icon-xl bs-icon-circle bs-icon-primary d-flex flex-shrink-0 justify-content-center align-items-center d-inline-block mb-2 bs-icon lg"><i class="fas fa-mobile-alt"></i></div>
+                    <div class="px-3">
+                        <h2 class="fw-bold mb-0">Mobile</h2>
+                        <ul class="text-start">
+                            <li>Java</li>
+                            <li>Firebase</li>
+                            <li>Android Studio</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col" data-bss-disabled-mobile="true" data-bss-hover-animate="tada">
+                <div class="text-center d-flex flex-column justify-content-center align-items-center py-3">
+                    <div class="bs-icon-xl bs-icon-circle bs-icon-primary d-flex flex-shrink-0 justify-content-center align-items-center d-inline-block mb-2 bs-icon lg"><i class="fas fa-desktop"></i></div>
+                    <div class="px-3">
+                        <h2 class="fw-bold mb-0">Desktop</h2>
+                        <ul class="text-start">
+                            <li>C# (.NET framework)</li>
+                            <li>Firebase</li>
+                            <li>API requests</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col" data-bss-disabled-mobile="true" data-bss-hover-animate="tada">
+                <div class="text-center d-flex flex-column justify-content-center align-items-center py-3">
+                    <div class="bs-icon-xl bs-icon-circle bs-icon-primary d-flex flex-shrink-0 justify-content-center align-items-center d-inline-block mb-2 bs-icon lg"><i class="fas fa-map-signs"></i></div>
+                    <div class="px-3">
+                        <h2 class="fw-bold mb-0">API</h2>
+                        <ul class="text-start">
+                            <li>Crawling</li>
+                            <li>Custom API endpoints</li>
+                            <li>Automatization with crawling</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col" data-bss-disabled-mobile="true" data-bss-hover-animate="tada">
+                <div class="text-center d-flex flex-column justify-content-center align-items-center py-3">
+                    <div class="bs-icon-xl bs-icon-circle bs-icon-primary d-flex flex-shrink-0 justify-content-center align-items-center d-inline-block mb-2 bs-icon lg"><i class="fas fa-robot"></i></div>
+                    <div class="px-3">
+                        <h2 class="fw-bold mb-0">ML &amp; AI</h2>
+                        <ul class="text-start">
+                            <li>Linear regression</li>
+                            <li>Image classification</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col" data-bss-disabled-mobile="true" data-bss-hover-animate="tada">
+                <div class="text-center d-flex flex-column justify-content-center align-items-center py-3">
+                    <div class="bs-icon-xl bs-icon-circle bs-icon-primary d-flex flex-shrink-0 justify-content-center align-items-center d-inline-block mb-2 bs-icon lg"><i class="fas fa-pager"></i></div>
+                    <div class="px-3">
+                        <h2 class="fw-bold mb-0">Website</h2>
+                        <ul class="text-start">
+                            <li>Backend with PHP or Node.js</li>
+                            <li>Frontend development</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col" data-bss-disabled-mobile="true" data-bss-hover-animate="tada">
+                <div class="text-center d-flex flex-column justify-content-center align-items-center py-3">
+                    <div class="bs-icon-xl bs-icon-circle bs-icon-primary d-flex flex-shrink-0 justify-content-center align-items-center d-inline-block mb-2 bs-icon lg"><i class="fab fa-ethereum"></i></div>
+                    <div class="px-3">
+                        <h2 class="fw-bold mb-0">Web3</h2>
+                        <ul class="text-start">
+                            <li>Blockchain development</li>
+                            <li>ERC20 tokens</li>
+                            <li>ETH smart contracts</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container py-4 py-xl-5" data-aos="fade-up">
+        <div class="row mb-5">
+            <div class="col-md-8 col-xl-6 text-center mx-auto">
+                <h2>My projects</h2>
+                <p class="text-start w-lg-50">I constantly like to try new frameworks or technologies, so I'm working on something every second. These are my bigger or more famous projects that I created in my spare time. Some of my projects have developed their own user base and community, which gives me great pleasure. I always like to create some useful software.</p>
+            </div>
+        </div>
+        <div class="row gy-4 row-cols-1 row-cols-md-2 row-cols-xl-3 justify-content-center">
+            <div class="col" data-aos="zoom-in-up" data-aos-duration="500" data-aos-once="true">
+                <div><img class="rounded img-fluid d-block w-100 fit-cover" style="height: 200px;" src="https://cdn.bootstrapstudio.io/placeholders/1400x800.png">
+                    <div class="py-4">
+                        <h4>CodersCoin&nbsp;<span class="badge bg-warning">Unfinished</span></h4>
+                        <p>CodersCoin is a unique and completely proprietary blockchain and cryptocurrency technology developed by Peter Till. CodersCoin serves as a kind of reputation and credit for programmers, designers, and computer enthusiasts.</p><button class="btn btn-primary" type="button">Visit website</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col" data-aos="zoom-in-up" data-aos-duration="500" data-aos-once="true">
+                <div><img class="rounded img-fluid d-block w-100 fit-cover" style="height: 200px;" src="https://cdn.bootstrapstudio.io/placeholders/1400x800.png">
+                    <div class="py-4">
+                        <h4>FocusMode</h4>
+                        <p>FocusMode is a powerful productivity tool made by Peter Till, that allows you to create custom modes such as study and work and block disruptive websites in those modes.&nbsp;Simply add the websites you want to block to each mode.</p><button class="btn btn-primary" type="button">Visit store</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container py-4 py-xl-5" data-aos="fade-up">
+        <div class="row mb-5">
+            <div class="col-md-8 col-xl-6 text-center mx-auto">
+                <h2>Certificates</h2>
+            </div>
+        </div>
         <div class="row">
-            <div class="col-sm">
-                <h2>FocusMode</h2>
-                <p>FocusMode is a powerful productivity tool made by Peter Till, that allows you to create custom modes such as study and work and block disruptive websites in those modes. Simply add the websites you want to block to each mode. These websites are automatically blocked when this mode is enabled. FocusMode lets you focus on your work or study without social media, news sites, or other online distractions. FocusMode helps you get more done in less time. </p>
-            </div>
-            <div class="col-sm">
-                <table class="table" style="color: white;">
-                    <thead></thead>
-                    <tr>
-                        <td>Technology</td>
-                        <td>JavaScript, HTML, CSS, Bootstrap, Chrome API</td>
-                    </tr>
-                    <tr>
-                        <td>Time to create</td>
-                        <td>Less than a week</td>
-                    </tr>
-                    <tr>
-                        <td>Website</td>
-                        <td><a href="https://microsoftedge.microsoft.com/addons/detail/oijfegadlcnfapbpkpkfmloghahlicea">Microsoft Addon</a></td>
-                    </tr>
-                </table>
+            <div class="col-md-8 col-xl-6 mx-auto p-4">
+                <div class="d-flex align-items-center align-items-md-start align-items-xl-center">
+                    <div class="bs-icon-xl bs-icon-circle bs-icon-primary d-flex flex-shrink-0 justify-content-center align-items-center me-4 d-inline-block bs-icon xl"><i class="fab fa-free-code-camp"></i></div>
+                    <div>
+                        <h4>JavaScript Algorithms and Data Structures</h4>
+                        <p>freeCodeCamp</p><a href="#">Learn More&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-arrow-right">
+                                <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"></path>
+                            </svg></a>
+                    </div>
+                </div>
+                <hr class="my-5">
+                <div class="d-flex align-items-center align-items-md-start align-items-xl-center">
+                    <div class="bs-icon-xl bs-icon-circle bs-icon-primary d-flex flex-shrink-0 justify-content-center align-items-center me-4 d-inline-block bs-icon xl"><i class="fab fa-free-code-camp"></i></div>
+                    <div>
+                        <h4>Responsive Web Design</h4>
+                        <p>freeCodeCamp</p><a href="#">Learn More&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-arrow-right">
+                                <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"></path>
+                            </svg></a>
+                    </div>
+                </div>
+                <hr class="my-5">
+                <div class="d-flex align-items-center align-items-md-start align-items-xl-center">
+                    <div class="bs-icon-xl bs-icon-circle bs-icon-primary d-flex flex-shrink-0 justify-content-center align-items-center me-4 d-inline-block bs-icon xl"><i class="fab fa-google"></i></div>
+                    <div>
+                        <h4>The Fundamentals of Digital Marketing</h4>
+                        <p>Erat netus est hendrerit, nullam et quis ad cras porttitor iaculis. Bibendum vulputate cras aenean.</p><a href="#">Learn More&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-arrow-right">
+                                <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"></path>
+                            </svg></a>
+                    </div>
+                </div>
             </div>
         </div>
-        <button class="btn btn-primary" onclick="fmode.close()">Close</button><!--Or from with dialog method-->
-      </dialog>
-      <footer class="bg-light text-center text-lg-start">
-        <!-- Copyright fixed-bottom -->
-        <div class="text-center p-3" style="background-color: #1B223D; color: white;">
-          © 2023 Copyright:
-          Peter Till
+    </div>
+    <section class="container py-4 py-xl-5" data-aos="fade-right">
+        <div class="row mb-5">
+            <div class="col-md-8 col-xl-6 text-center mx-auto">
+                <h2>Testimonials</h2>
+                <p class="text-start w-lg-50">I've already worked with a few people and asked them for their input. I have also asked some of my software users or friends that I've worked with on a cool project. Their feedback means a lot to me.</p>
+            </div>
         </div>
-        <!-- Copyright -->
-      </footer>
+        <div class="row gy-4 row-cols-1 row-cols-sm-2 row-cols-lg-3">
+            <div class="col">
+                <div>
+                    <p class="text-black bg-body-tertiary border rounded border-0 p-4">Amazing and easy to work with</p>
+                    <div class="d-flex"><img class="rounded-circle flex-shrink-0 me-3 fit-cover" width="50" height="50" src="https://cdn.bootstrapstudio.io/placeholders/1400x800.png">
+                        <div>
+                            <p class="fw-bold text-primary mb-0">Haycat</p>
+                            <p class="text-muted mb-0">Client</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div>
+                    <p class="text-black bg-body-tertiary border rounded border-0 p-4">Indeed he is good. I worked with him</p>
+                    <div class="d-flex"><img class="rounded-circle flex-shrink-0 me-3 fit-cover" width="50" height="50" src="https://cdn.bootstrapstudio.io/placeholders/1400x800.png">
+                        <div>
+                            <p class="fw-bold text-primary mb-0">John Smith</p>
+                            <p class="text-muted mb-0">Erat netus</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div>
+                    <p class="text-black bg-body-tertiary border rounded border-0 p-4">Nisi sit justo faucibus nec ornare amet, tortor torquent. Blandit class dapibus, aliquet morbi.</p>
+                    <div class="d-flex"><img class="rounded-circle flex-shrink-0 me-3 fit-cover" width="50" height="50" src="https://cdn.bootstrapstudio.io/placeholders/1400x800.png">
+                        <div>
+                            <p class="fw-bold text-primary mb-0">John Smith</p>
+                            <p class="text-muted mb-0">Erat netus</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="container">
+        <div class="row mb-5">
+            <div class="col-md-8 col-xl-6 text-center mx-auto">
+                <h2>Ebooks</h2>
+                <p class="text-start w-lg-50">Curae hendrerit donec commodo hendrerit egestas tempus, turpis facilisis nostra nunc. Vestibulum dui eget ultrices.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col d-flex justify-content-center">
+                <div class="card bg-dark" style="width: 196px;margin-bottom: 20px;"><img class="img-fluid card-img-top w-100 d-block" src="assets/img/python.png" width="196px" height="auto">
+                    <div class="card-body">
+                        <h4 class="card-title">Python for Beginners</h4>
+                        <h6 class="text-muted card-subtitle mb-2">Free</h6><button class="btn btn-primary" type="button">Get product</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col d-flex justify-content-center">
+                <div class="card bg-dark" style="width: 196px;margin-bottom: 20px;"><img class="img-fluid card-img-top w-100 d-block" src="assets/img/hacking.png" width="196px" height="auto">
+                    <div class="card-body">
+                        <h4 class="card-title">The basics of hacking &amp; cybersecurity</h4>
+                        <h6 class="text-muted card-subtitle mb-2">Free</h6><button class="btn btn-primary" type="button">Get product</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col d-flex justify-content-center">
+                <div class="card bg-dark" style="width: 196px;margin-bottom: 20px;"><img class="img-fluid card-img-top w-100 d-block" src="assets/img/java%20(1).jpg" width="196px" height="auto">
+                    <div class="card-body">
+                        <h4 class="card-title">The basics of Java programming</h4>
+                        <h6 class="text-muted card-subtitle mb-2">Free</h6><button class="btn btn-primary" type="button">Get product</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="position-relative py-4 py-xl-5">
+        <div class="container position-relative">
+            <div class="row mb-5">
+                <div class="col-md-8 col-xl-6 text-center mx-auto">
+                    <h2>Contact me</h2>
+                    <p class="text-start w-lg-50">Curae hendrerit donec commodo hendrerit egestas tempus, turpis facilisis nostra nunc. Vestibulum dui eget ultrices.</p>
+                </div>
+            </div>
+            <div class="row d-flex justify-content-center">
+                <div class="col-md-6 col-lg-4 col-xl-4">
+                    <div class="d-flex flex-column justify-content-center align-items-start h-100">
+                        <div class="d-flex align-items-center p-3">
+                            <div class="bs-icon-md bs-icon-rounded bs-icon-primary d-flex flex-shrink-0 justify-content-center align-items-center d-inline-block bs-icon"><i class="fab fa-discord"></i></div>
+                            <div class="px-2">
+                                <h6 class="mb-0">Discord</h6>
+                                <p class="mb-0">petertill</p>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center p-3">
+                            <div class="bs-icon-md bs-icon-rounded bs-icon-primary d-flex flex-shrink-0 justify-content-center align-items-center d-inline-block bs-icon"><i class="fas fa-mail-bulk"></i></div>
+                            <div class="px-2">
+                                <h6 class="mb-0">Email</h6>
+                                <p class="mb-0">ptertill@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center p-3">
+                            <div class="bs-icon-md bs-icon-rounded bs-icon-primary d-flex flex-shrink-0 justify-content-center align-items-center d-inline-block bs-icon"><i class="fab fa-instagram"></i></div>
+                            <div class="px-2">
+                                <h6 class="mb-0">Instagram</h6>
+                                <p class="mb-0">@ptertill</p>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center p-3">
+                            <div class="bs-icon-md bs-icon-rounded bs-icon-primary d-flex flex-shrink-0 justify-content-center align-items-center d-inline-block bs-icon"><i class="fab fa-linkedin"></i></div>
+                            <div class="px-2">
+                                <h6 class="mb-0">LinkedIn</h6>
+                                <p class="mb-0"><a href="https://www.linkedin.com/in/ptertill/">ptertill</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-5 col-xl-4">
+                    <div>
+                        <form class="p-3 p-xl-4" id="contact-form">
+                            <div class="mb-3"><input class="form-control" type="text" id="name" name="name" placeholder="Name"></div>
+                            <div class="mb-3"><input class="form-control" type="email" id="email" name="email" placeholder="Email"></div>
+                            <div class="mb-3"><textarea class="form-control" id="message" name="message" rows="6" placeholder="Message"></textarea></div>
+                            <div><button class="btn btn-primary d-block w-100" type="submit">Send </button></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="text-center" style="background: var(--bs-light);color: rgb(255, 255, 255);">
+        <div class="container text-muted py-4 py-lg-5">
+            <p class="mb-0">Copyright © 2024 Peter Till</p>
+        </div>
+    </footer>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/aos.min.js"></script>
+    <script src="assets/js/bs-init.js"></script>
 </body>
+
 </html>

@@ -1,14 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html data-bs-theme="light" lang="en">
+
 <head>
+    <meta name="theme-color" content="#1E222D">
+    <link rel="canonical" href="https://petertill.github.io/">
+    <script type="application/ld+json">
+        {
+            "@context": "http://schema.org",
+            "@type": "WebSite",
+            "name": "Peter Till | Software Engineer",
+            "url": "https://petertill.github.io/"
+        }
+    </script>
+
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="manifest" href="manifest.json" crossorigin="use-credentials">
+    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/css/bs-theme-overrides.css">
+    <link rel="stylesheet" href="assets/css/aos.min.css">
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <link rel="stylesheet" href="assets/css/Navbar-Right-Links-Dark-icons.css">
+    <link rel="stylesheet" href="assets/css/Testimonials-images.css">
+
+
+    <!-- OLD -->
     <!-- SEO -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <!-- outer -->
-    <title>Peter Till | Software Engineer</title>
-    <link rel="icon" type="image/png" href="./assets/brand/logo.png" />
-    <link rel="apple-touch-icon" sizes="180x180" href="./assets/brand/logo.png">
     <!-- Primary Meta Tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Peter Till | Software Engineer</title>
+    <link rel="icon" type="image/png" href="./assets/img/brand/logo.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/img/brand/logo.png">
+    
     <meta name="title" content="Peter Till | Software Engineer">
     <meta name="description" content="I'm Peter, an average guy who programs as a hobby and is preparing for his profession. I spend my free time with developing applications for mobile & desktop">
     <meta name="keywords" content="software,engineer,petertill,Peter Till, Till Peter, Till Péter,freelancer">
@@ -18,259 +41,255 @@
     <meta name="author" content="Peter Till">
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://metatags.io/">
+    <meta property="og:url" content="https://petertill.github.io/">
     <meta property="og:title" content="Peter Till | Software Engineer">
     <meta property="og:description" content="I'm Peter, an average guy who programs as a hobby and is preparing for his profession. I spend my free time with developing applications for mobile & desktop">
-    <meta property="og:image" content="https://metatags.io/assets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png">
+    <meta property="og:image" content="https://petertill.github.io/assets/brand/logo.png">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://metatags.io/">
+    <meta property="twitter:url" content="https://petertill.github.io/">
     <meta property="twitter:title" content="Peter Till | Software Engineer">
     <meta property="twitter:description" content="I'm Peter, an average guy who programs as a hobby and is preparing for his profession. I spend my free time with developing applications for mobile & desktop">
-    <meta property="twitter:image" content="https://metatags.io/assets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png">
-    <!-- SCRIPTS -->
+    <meta property="twitter:image" content="https://petertill.github.io/assets/brand/logo.png">
+    <!-- PWA -->
+    <link rel="manifest" href="manifest.json" crossorigin="use-credentials">
+    
+    
+    <!-- LOADS -->
+    <!-- styles -->
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/d9ec437633.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="assets/css/bs-theme-overrides.css">
+    <link rel="stylesheet" href="assets/css/aos.min.css">
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <link rel="stylesheet" href="assets/css/Navbar-Right-Links-Dark-icons.css">
+    <link rel="stylesheet" href="assets/css/Testimonials-images.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <!-- fontawesome -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+    <!-- scripts -->
+    <script src="./assets/js/email.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
     <script src="https://cdn.jsdelivr.net/npm/@observablehq/plot@0.6"></script>
-    <!-- fontawesome -->	
-    <script src="https://kit.fontawesome.com/d9ec437633.js" crossorigin="anonymous"></script>
-    <!-- JQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DMVQ4ZX9YS"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-DMVQ4ZX9YS');
-    </script>
-    <!--bootstrap-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-
-    <!-- Clarity tracking code for https://petertill.tech/ -->
-    <script>
-        (function(c,l,a,r,i,t,y){
-            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";
-            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-        })(window, document, "clarity", "script", "hi53yf8r3v");
-    </script>
-    <!--STYLES-->
-    <link rel="stylesheet" href="style.css">
+    
+    <!--link rel="stylesheet" href="style.css"-->
 </head>
+
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark custom-navbar p-10 fixed-top">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="./index.html">
-            <img src="./assets/brand/logo.png" alt="Logo" width="40" height="40" class="d-inline-block align-text-top">
-            Peter Till
-          </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <!--span class="navbar-toggler-icon">re</span-->
-            <span class="" role="button" ><i class="fas fa-code-branch" aria-hidden="true" style="color:#e6e6ff"></i></span>
-          </button>
-          <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link" href="./index.html">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="./token.html">TillCoin</a>
-              </li><!--.disabled to disable-->
-              <!--li class="nav-item">
-                <a class="nav-link" href="./cart.html"><i class="fas fa-shopping-cart"></i> <span class="badge badge-danger bg-danger px-1">
-                    <script>
-                        var cart = JSON.parse(sessionStorage.getItem("cart"));
-                        if(cart != null){document.write(Object.keys(cart).length);}else{document.write("0");}
-                    </script>
-                </span></a>
-              </li-->
-            </ul>
-          </div>
+    <nav class="navbar navbar-expand-md sticky-top bg-light py-3" style="background: var(--bs-light);border-radius: 0px;border-bottom-right-radius: 20px;border-bottom-left-radius: 20px;" data-bs-theme="dark">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="./index.html">
+                <img width="40" height="40" src="assets/img/brand/logo.png">
+                <span style="color: var(--bs-primary);font-size: 30px;margin-left: 10px; font-weight: 900;">Peter Till</span>
+            </a>
+            <button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-5"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navcol-5">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item d-flex align-items-center">
+                        <a class="nav-link" href="./index.html"><i class="fas fa-igloo"></i> Home</a>
+                    </li>
+                    <li class="nav-item d-flex align-items-center">
+                        <a class="nav-link" href="#"><i class="fas fa-envelope"></i> Newsletter</a>
+                    </li>
+                    <li class="nav-item d-flex align-items-center">
+                        <a class="nav-link active" href="./token.html">
+                            <i>
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M16 7V10C16 13.314 12.4182 15 8 15C3.66036 15 0.128 13.409 0.00363636 10.177L0 10V7C0 10.313 3.58182 13 8 13C12.4182 13 16 10.313 16 7ZM8 0C12.4182 0 16 2.686 16 6C16 9.313 12.4182 12 8 12C3.58182 12 0 9.313 0 6C0 2.686 3.58182 0 8 0ZM3 2L8 3L13 2L12 3L8 4L4 3L3 2ZM7.5 5H8.5V9L8 10L7.5 9V5Z" />
+                                </svg>
+                            </i>
+                            TillCoin
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
         </div>
-      </nav>
-      <!--div class="hero w-100 h-100"-->
-      <div class="container-fluid hero px-0">
-            <div class="row w-100 mx-0 h-100 d-flex align-items-center justify-content-center">
-                <div class="col-md-6 order-2 order-sm-2 ">
-                    <!-- Text -->
-                    <h1 class="text-outline">TillCoin</h1>
-                    <p class="hero-prof h2 ">
-                      <span style="color: green;">
-                      <i class="fas fa-sort-up"></i> <!--down-->
-                      &nbsp;0.5 MATIC / 1 TCO
-                    </span>
-                    </p>
-                    
-                    <!-- Add more content as needed -->
+    </nav>
+    <div class="container-fluid py-4 py-xl-5" style="background: #1B223D;">
+        <div class="row gy-4 gy-md-0">
+            <div class="col-md-6">
+                <div class="p-xl-5 m-xl-5"><img class="rounded img-fluid w-100 fit-cover" style="width: 200px; height: auto;" src="./assets/img/token.png"></div>
+            </div>
+            <div class="col-md-6 text-center text-md-start d-flex d-sm-flex d-md-flex justify-content-center align-items-center justify-content-md-start align-items-md-center justify-content-xl-center">
+                <div style="max-width: 350px;">
+                    <h2 class="text-uppercase fw-bold"><span style="color: rgb(221, 119, 50);">TillCoin</span></h2>
+                    <p class="my-3 h2"><span style="color: green;">
+                        <i class="fas fa-sort-up" aria-hidden="true"></i> <!--down-->
+                        &nbsp;0.5 MATIC / 1 TCO
+                      </span></p><a class="btn btn-primary btn-lg me-2" role="button" href="#">Button</a><a class="btn btn-outline-primary btn-lg" role="button" href="#">Button</a>
                 </div>
-                <div class="col-md-6 order-1 order-sm-1">
-                  <!-- Image -->
-                  <!--img src="path/to/image.jpg" alt="Hero Image" class="img-fluid"-->
-                  <img class="hero-img d-block mx-auto" src="./assets/brand/token.png" alt="TillCoin logo">
-                </div>
-              </div>
+            </div>
         </div>
-      <!--/div-->
-      <main class="container">
-        <section>
-            <div class="row">
-                <div class="col-xs-12 text-center"><h2>What is TillCoin ($TCO)?</h2></div>
-                <div class="col-xs-12"><p>TillCoin $TCO is my own utility web3 token on the Polygon network. With this token, you can invest in "me" while being cool among other people and accessing benefits/premium subscribtions in all of my projects. For lifetime as long as you own TCO.</p></div>
+    </div>
+    <div class="container" data-aos="fade-up">
+        <div class="row">
+            <div class="col-md-6">
+                <h1>What is TillCoin ($TCO)?</h1>
+                <p>TillCoin $TCO is my own utility web3 token on the Polygon network. With this token, you can invest in "me" while being cool among other people and accessing benefits/premium subscribtions in all of my projects. For lifetime as long as you own TCO.</p>
+                <p>$TCO can be directly traded for $MATIC on the Polygon network back and forth, and it has a dynamic price because of its own market pool. The more people invest MATIC in TillCoin, the more your tokens will be worth when you sell them. How does it work and how can you support me with it? Think of it as a MATIC reserve. When you send MATIC to the TillCoin smart contract, you get a TCO token back. When you own one or some of these tokens, you get access to a lot of members' stuff, like free premium on all software that only I produce, and much more. When many people buys TCO and its supply grows, the MATIC reserve will hold more assets, and you can redeem your MATIC tokens + profit.</p>
             </div>
-            <div class="row d-flex align-items-center justify-content-center">
-                <div class="col-md-9 mb-15">
-                    <p>$TCO can be directly traded for $MATIC on the Polygon network back and forth, and it has a dynamic price because of its own market pool. The more people invest MATIC in TillCoin, the more your tokens will be worth when you sell them. How does it work and how can you support me with it? Think of it as a MATIC reserve. When you send MATIC to the TillCoin smart contract, you get a TCO token back. When you own one or some of these tokens, you get access to a lot of members' stuff, like free premium on <strong>all</strong> software that only I produce, and much more. When many people buys TCO and its supply grows, the MATIC reserve will hold more assets, and you can redeem your MATIC tokens + profit.</p>
-                </div>
-                <div class="col-md-3 d-flex align-items-center">
-                    <img src="./assets/brand/token.png" alt="Profile picture" style="width: 201px;">
-                </div>
+            <div class="col-md-6"><img src="assets/img/token.png" width="100%" height="100%"></div>
+        </div>
+    </div>
+    <section class="container py-4 py-xl-5" data-aos="fade-up">
+
+        <div class="row mb-5">
+            <div class="col-md-8 col-xl-10 text-center mx-auto">
+                <h2>Details (testnet)</h2>
+                <p class="text-start w-lg-50">🤫 Shhh! If you engage in testnet activities regarding our token, you may get an airdrop of real tokens in the future!</p>
+                <p class="text-start w-lg-50">
+                    Network: <code>Polygon Mumbai</code><br>
+                    Contract address: <code>0xeaC463632B0545b5A5462C436BF5C212B7bD822E</code><br>
+                    Name: <code>TillCoin</code><br>
+                    Symbol: <code>TCO</code><br>
+                    Decimals: <code>18</code><br>
+                  </p>
             </div>
-        </section>
-        <section>
-          <div class="row">
-              <div class="col-xs-12 text-center"><h2>Details (testnet)</h2></div>
-              <div class="col-xs-12"><p>🤫 Shhh! If you engage in testnet activities regarding our token, you may get an airdrop of real tokens in the future!</p></div>
-              <div class="col-xs-12"><p>
-                Network: <code>Polygon Mumbai</code><br>
-                Contract address: <code>0xeaC463632B0545b5A5462C436BF5C212B7bD822E</code><br>
-                Name: <code>TillCoin</code><br>
-                Symbol: <code>TCO</code><br>
-                Decimals: <code>18</code><br>
-              </p>
-              <button class="btn btn-primary" onclick="addToMetamask()">Add to Metamask</button>
+        </div>
+
+    </section>
+    <section class="container py-4 py-xl-5" data-aos="fade-up">
+        <div class="row mb-5">
+            <!--Chart and the 2 action panels next to it under each other-->
+            <div class="col-md-8 col-xl-8 text-center mx-auto my-auto">
+                <div id="chart"></div>
             </div>
-          </div>
-        </section>
-        <section>
-          <div class="row">
-            <div class="col-xs-12 text-center"><h2>Buy and sell TCO</h2></div>
-            <div class="row justify-content-center d-flex mx-auto">
-              <div class="card bg-dark p-2 col-auto flex-fill" style="width: 18rem;">
-                <div class="card-body">
-                  <h3 class="card-title">Buy TCO</h3>
-                  <label for="b-tco">Tco: </label>
-                  <div class="input-group mb-3">
-                    <input type="number" class="form-control" id="b-tco" placeholder="You want..." /><br>
-                    <div class="input-group-append">
-                      <span class="input-group-text" id="matic-inp">TCO</span>
+                
+            <div class="col-md-8 col-xl-4 text-center mx-auto">
+                <h2>Buy and sell TCO</h2>
+                <p class="text-start w-lg-50">🤫 Shhh! If you engage in testnet activities regarding our token, you may get an airdrop of real tokens in the future!</p>
+
+                <div class="row justify-content-center d-flex mx-auto">
+                    <div class="card p-2 col-auto flex-fill bg-dark" style="width: 18rem;">
+                      <div class="card-body">
+                        <h3 class="card-title">Buy TCO</h3>
+                        <label for="b-tco">TillCoin: </label>
+                        <div class="input-group mb-3">
+                          <input type="number" class="form-control" id="b-tco" placeholder="You want..."><br>
+                          <div class="input-group-append">
+                            <span class="input-group-text text-black" id="matic-inp">TCO</span>
+                          </div>
+                        </div>
+                        You pay: <span id="s-matic"></span> MATIC<br>
+                        <button class="btn btn-success mt-2" onclick="buyTokens()">Buy TCO</button>
+                      </div>
                     </div>
-                  </div>
-                  You pay: <span id="s-matic"></span> MATIC<br>
-                  <button class="btn btn-success mt-2" onclick="buyTokens()">Buy TCO</button>
-                </div>
-              </div>
-              <div class="card bg-dark p-2 col-auto flex-fill" style="width: 18rem;">
-                <div class="card-body">
-                  <h3 class="card-title">Sell TCO</h3>
-                  <label for="s-tco">Tco: </label>
-                  <div class="input-group mb-3">
-                    <input type="number" class="form-control" id="s-tco" placeholder="You sell..."/><br>
-                    <div class="input-group-append">
-                      <span class="input-group-text" id="tco-inp">TCO</span>
+                    <div class="card p-2 col-auto flex-fill bg-dark" style="width: 18rem;">
+                      <div class="card-body">
+                        <h3 class="card-title">Sell TCO</h3>
+                        <label for="s-tco">TillCoin: </label>
+                        <div class="input-group mb-3">
+                          <input type="number" class="form-control" id="s-tco" placeholder="You sell..."><br>
+                          <div class="input-group-append">
+                            <span class="input-group-text text-black" id="tco-inp">TCO</span>
+                          </div>
+                        </div>
+                        You get back: <span id="g-matic"></span> MATIC<br>
+                        <button class="btn btn-danger mt-2" onclick="sellTokens()">Sell TCO</button>
+                      </div>
                     </div>
-                  </div>
-                  You get back: <span id="g-matic"></span> MATIC<br>
-                  <button class="btn btn-danger mt-2" onclick="sellTokens()">Sell TCO</button>
                 </div>
-              </div>
+
+                <!--div id="chart"></div-->
+
             </div>
-          </div>
-          <div class="row">
-            <div class="col-xs-12 text-center"><h2>Buy and sell TCO</h2></div>
-          </div>
-          <div id="chart"></div>
-        </section>
-        <section>
-            <div class="row">
-                <div class="col-xs-12 text-center"><h2>Is there risk?</h2></div>
-                <div class="col-xs-12"><p>Yes, but it is very small. You can lose MATIC if everyone sells their TillCoin and its value decreases. In this case, you can still enjoy the benefits of owning TillCoin regardless of value. It's worth considering that this is just a supporter and fan utility token for fun that you can use to buy a crypto "stock" from my life. <strong>This is not investment advice and profits are not guaranteed.</strong></p></div>
-            </div>
-            
-        </section>
-        <section>
-            <div class="row">
-                <div class="col-xs-12 text-center"><h2>Benefits of owning some TCO</h2></div>
-                <div class="col-xs-12"><p>If you have received or bought a TillCoin token on the Polygon network, you can enjoy various benefits as long as you own these token(s). The greatest benefit is that you will have automatically lifetime free <b>premium</b> subscription in every software and make and you'll also be able to beta test my projects and give requests for new functions. You can also join my private Discord community where you can learn to code and more! There is a full list of benefits of owning TillCoin:</p></div>
-            </div>
-            <div class="row">
-                    <ul class="list-group w-100 mx-auto">
-                        <div class="list-group-item">
-                            <span class="d-inline-flex align-items-center justify-content-center text-white rounded m-1 me-2" style="background-color: yellowgreen; width: 40px; height: 40px;">
-                              <i class="fas fa-cookie fa-lg"></i>
-                            </span>
-                            Being cool among other people
-                          </div>
-                        <div class="list-group-item">
-                          <span class="d-inline-flex align-items-center justify-content-center text-white rounded m-1 me-2" style="background-color: #ff4500; width: 40px; height: 40px;">
-                            <i class="fas fa-gem fa-lg"></i>
-                          </span>
-                          Premium subscription in all of my software
-                        </div>
-                        <div class="list-group-item">
-                          <div class="d-inline-flex align-items-center justify-content-center text-white rounded m-1 me-2" style="background-color: #0082ca; width: 40px; height: 40px;">
-                            <i class="fab fa-discord fa-lg"></i>
-                          </div>
-                          Access to my private Discord server
-                        </div>
-                        <div class="list-group-item">
-                          <div class="d-inline-flex align-items-center justify-content-center text-white rounded m-1 me-2" style="background-color: #00b386; width: 40px; height: 40px;">
-                            <i class="fas fa-hiking fa-lg"></i>
-                          </div>
-                          Early access to my projects
-                        </div>
-                        <div class="list-group-item">
-                          <div class="d-inline-flex align-items-center justify-content-center text-white rounded m-1 me-2" style="background-color: yellow; width: 40px; height: 40px;">
-                            <i class="fab fa-btc fa-lg" style="color: black;"></i>
-                          </div>
-                          Airdrop whitelist of each of my new web3 projects
-                        </div>
-                        <div class="list-group-item">
-                            <div class="d-inline-flex align-items-center justify-content-center text-white rounded m-1 me-2" style="background-color: black; width: 40px; height: 40px;">
-                              <i class="fab fa-github fa-lg"></i>
-                            </div>
-                            Access to private Github repos
-                          </div>
-                          <div class="list-group-item">
-                            <div class="d-inline-flex align-items-center justify-content-center text-white rounded m-1 me-2" style="background-color: #a200b8; width: 40px; height: 40px;">
-                              <i class="fas fa-book fa-lg"></i>
-                            </div>
-                            Get every ebook I write for free
-                          </div>
-                          <div class="list-group-item">
-                            <div class="d-inline-flex align-items-center justify-content-center text-white rounded m-1 me-2" style="background-color: #2ab300; width: 40px; height: 40px;">
-                              <i class="fas fa-thumbs-up fa-lg"></i>
-                            </div>
-                            Get coding advice directly from me anytime
-                          </div>
-                          <div class="list-group-item">
-                            <div class="d-inline-flex align-items-center justify-content-center text-white rounded m-1 me-2" style="background-color: #553a00; width: 40px; height: 40px;">
-                              <i class="fas fa-hammer fa-lg"></i>
-                            </div>
-                            Suggest new features in my software and build in public with me
-                          </div>
-                          <div class="list-group-item">
-                            <div class="d-inline-flex align-items-center justify-content-center text-white rounded m-1 me-2" style="background-color: #00b386; width: 40px; height: 40px;">
-                              <i class="fas fa-message fa-lg"></i>
-                            </div>
-                            Directly message me
-                          </div>
-                    </ul> 
-            </div>
-        </section>
-      </main>
-      <footer class="bg-light text-center text-lg-start">
-        <!-- Copyright fixed-bottom -->
-        <div class="text-center p-3" style="background-color: #1B223D; color: white;">
-          © 2023 Copyright:
-          Peter Till
         </div>
-        <!-- Copyright -->
-      </footer>
-      <script src="https://cdn.ethers.io/lib/ethers-5.7.2.umd.min.js" type="application/javascript"></script>
-      <script src="./web3.js" type="text/javascript"></script>
+    </section>
+    <section class="container py-4 py-xl-5" data-aos="fade-up">
+
+        <div class="row mb-5">
+            <div class="col-md-8 col-xl-10 text-center mx-auto">
+                <h2>Is there risk?</h2>
+                <p class="text-start w-lg-50">Yes, but it is very small. You can lose MATIC if everyone sells their TillCoin and its value decreases. In this case, you can still enjoy the benefits of owning TillCoin regardless of value. It's worth considering that this is just a supporter and fan utility token for fun that you can use to buy a crypto "stock" from my life. This is not investment advice and profits are not guaranteed.</p>
+            </div>
+        </div>
+
+    </section>
+    <section class="container py-4 py-xl-5" data-aos="fade-up">
+
+        <div class="row mb-5">
+            <div class="col-md-8 col-xl-10 text-center mx-auto">
+                <h2>Benefits of owning some TCO</h2>
+                <p class="text-start w-lg-50">If you have received or bought a TillCoin token on the Polygon network, you can enjoy various benefits as long as you own these token(s). The greatest benefit is that you will have automatically lifetime free premium subscription in every software and make and you'll also be able to beta test my projects and give requests for new functions. You can also join my private Discord community where you can learn to code and more! There is a full list of benefits of owning TillCoin:</p>
+                <ul class="list-group w-100 mx-auto text-start">
+                    <div class="list-group-item">
+                        <span class="d-inline-flex align-items-center justify-content-center text-white rounded m-1 me-2" style="background-color: yellowgreen; width: 40px; height: 40px;">
+                          <i class="fas fa-cookie fa-lg" aria-hidden="true"></i>
+                        </span>
+                        Being cool among other people
+                      </div>
+                    <div class="list-group-item">
+                      <span class="d-inline-flex align-items-center justify-content-center text-white rounded m-1 me-2" style="background-color: #ff4500; width: 40px; height: 40px;">
+                        <i class="fas fa-gem fa-lg" aria-hidden="true"></i>
+                      </span>
+                      Premium subscription in all of my software
+                    </div>
+                    <div class="list-group-item">
+                      <div class="d-inline-flex align-items-center justify-content-center text-white rounded m-1 me-2" style="background-color: #0082ca; width: 40px; height: 40px;">
+                        <i class="fab fa-discord fa-lg" aria-hidden="true"></i>
+                      </div>
+                      Access to my private Discord server
+                    </div>
+                    <div class="list-group-item">
+                      <div class="d-inline-flex align-items-center justify-content-center text-white rounded m-1 me-2" style="background-color: #00b386; width: 40px; height: 40px;">
+                        <i class="fas fa-hiking fa-lg" aria-hidden="true"></i>
+                      </div>
+                      Early access to my projects
+                    </div>
+                    <div class="list-group-item">
+                      <div class="d-inline-flex align-items-center justify-content-center text-white rounded m-1 me-2" style="background-color: yellow; width: 40px; height: 40px;">
+                        <i class="fab fa-btc fa-lg" style="color: black;" aria-hidden="true"></i>
+                      </div>
+                      Airdrop whitelist of each of my new web3 projects
+                    </div>
+                    <div class="list-group-item">
+                        <div class="d-inline-flex align-items-center justify-content-center text-white rounded m-1 me-2" style="background-color: black; width: 40px; height: 40px;">
+                          <i class="fab fa-github fa-lg" aria-hidden="true"></i>
+                        </div>
+                        Access to private Github repos
+                      </div>
+                      <div class="list-group-item">
+                        <div class="d-inline-flex align-items-center justify-content-center text-white rounded m-1 me-2" style="background-color: #a200b8; width: 40px; height: 40px;">
+                          <i class="fas fa-book fa-lg" aria-hidden="true"></i>
+                        </div>
+                        Get every ebook I write for free
+                      </div>
+                      <div class="list-group-item">
+                        <div class="d-inline-flex align-items-center justify-content-center text-white rounded m-1 me-2" style="background-color: #2ab300; width: 40px; height: 40px;">
+                          <i class="fas fa-thumbs-up fa-lg" aria-hidden="true"></i>
+                        </div>
+                        Get coding advice directly from me anytime
+                      </div>
+                      <div class="list-group-item">
+                        <div class="d-inline-flex align-items-center justify-content-center text-white rounded m-1 me-2" style="background-color: #553a00; width: 40px; height: 40px;">
+                          <i class="fas fa-hammer fa-lg" aria-hidden="true"></i>
+                        </div>
+                        Suggest new features in my software and build in public with me
+                      </div>
+                      <div class="list-group-item">
+                        <div class="d-inline-flex align-items-center justify-content-center text-white rounded m-1 me-2" style="background-color: #00b386; width: 40px; height: 40px;">
+                          <i class="fas fa-message fa-lg" aria-hidden="true"></i>
+                        </div>
+                        Directly message me
+                      </div>
+                </ul>
+            </div>
+        </div>
+
+    </section>
+    <footer class="text-center" style="background: var(--bs-light);color: rgb(255, 255, 255);">
+        <div class="container text-muted py-4 py-lg-5">
+            <p class="mb-0">Copyright © 2024 Peter Till</p>
+        </div>
+    </footer>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/aos.min.js"></script>
+    <script src="assets/js/bs-init.js"></script>
+    <script src="https://cdn.ethers.io/lib/ethers-5.7.2.umd.min.js" type="application/javascript"></script>
+    <script src="assets/js/web3.js" type="text/javascript"></script>
       <script type="text/javascript">
         const months = [
             "January", "February", "March", "April", "May", "June",
@@ -318,7 +337,7 @@
             prices.push({
                 month: sortedMonths[i],
                 price: price,
-                color: "gray"
+                color: color
             });
         }
 
@@ -367,4 +386,5 @@
         div.append(plot);
     </script>
 </body>
+
 </html>

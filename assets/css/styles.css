@@ -1,0 +1,19 @@
+svg {
+    fill: currentColor;
+    width: 1em;
+    height: 1em;
+}
+
+
+#chart svg {
+        width: 100%;
+        fill: initial;
+        height: initial;
+}
+
+
+#chart text {
+    color: lightgrey !important;
+    stroke: none !important;
+        
+}
