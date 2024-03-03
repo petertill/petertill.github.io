@@ -597,14 +597,28 @@ provider.send("eth_requestAccounts", []).then(() => {
 });
 
 async function getHistoricalTokenPriceEvents() {
-	const filter = Contract.filters.TokensBought(); // Use the event filter
+	/*const filter = Contract.filters.TokensBought(); // Use the event filter
   	const logs = await Contract.queryFilter(filter);
 	return logs.map(log => ({
 		buyer: log.args.buyer,
 		numberOfTokens: log.args.numberOfTokens.toString(),
 		totalPrice: log.args.totalPrice.toString(),
 		tokenPrice: log.args.tokenPrice.toString()
+	}));*/
+
+	const filter = [utils.id('TokensBought(address,uint256,uint256,uint256)')];
+    const logs = await provider.getLogs({
+      fromBlock: 12794325,
+      toBlock: 'latest',
+      topics: filter,
+    });
+	return logs.map(log => ({
+		buyer: log.args.buyer,
+		numberOfTokens: log.args.numberOfTokens.toString(),
+		totalPrice: log.args.totalPrice.toString(),
+		tokenPrice: log.args.tokenPrice.toString()
 	}));
+	
 }
 
 //On body load
