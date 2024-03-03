@@ -609,6 +609,7 @@ async function getHistoricalTokenPriceEvents() {
 
 //On body load
 $(document).ready(async function() {
+	console.log("Web3.js loaded");
 	const historicalTokenPriceEvents = await getHistoricalTokenPriceEvents();
 	console.log(historicalTokenPriceEvents);
 });
