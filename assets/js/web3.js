@@ -1,4 +1,4 @@
-const ContractAddress = "0x0bE577529776DF732a9EE8922ac8A532e438736C";
+const ContractAddress = "0x6C91B584d16BE44b051E4BB21087342877CF0e50";
 const ABI = [
 	{
 		"inputs": [],
@@ -177,6 +177,12 @@ const ABI = [
 				"internalType": "uint256",
 				"name": "totalPrice",
 				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "currentPrice",
+				"type": "uint256"
 			}
 		],
 		"name": "TokensBought",
@@ -201,6 +207,12 @@ const ABI = [
 				"indexed": false,
 				"internalType": "uint256",
 				"name": "totalEarned",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "currentPrice",
 				"type": "uint256"
 			}
 		],
@@ -235,6 +247,19 @@ const ABI = [
 	{
 		"inputs": [],
 		"name": "INITIAL_RESERVE_ETHER",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "MAX_SUPPLY",
 		"outputs": [
 			{
 				"internalType": "uint256",
@@ -569,6 +594,23 @@ provider.send("eth_requestAccounts", []).then(() => {
     signer = provider.getSigner(accounts[0]);
     Contract = new ethers.Contract(ContractAddress,ABI,signer);
   });
+});
+
+async function getHistoricalTokenPriceEvents() {
+	const filter = Contract.filters.TokensBought(); // Use the event filter
+  	const logs = await Contract.queryFilter(filter);
+	return logs.map(log => ({
+		buyer: log.args.buyer,
+		numberOfTokens: log.args.numberOfTokens.toString(),
+		totalPrice: log.args.totalPrice.toString(),
+		tokenPrice: log.args.tokenPrice.toString()
+	}));
+}
+
+//On body load
+$(document).ready(async function() {
+	const historicalTokenPriceEvents = await getHistoricalTokenPriceEvents();
+	console.log(historicalTokenPriceEvents);
 });
 
 async function fetchPrice() { //One token is worth this much (0.5)
