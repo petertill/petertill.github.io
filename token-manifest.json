@@ -1,21 +1,21 @@
 {
-    "short_name": "Peter Till",
-    "name": "Peter Till",
+    "short_name": "TillCoin Wallet",
+    "name": "TillCoin Wallet",
     "icons": [
         {
-            "src": "./assets/img/logo.png",
+            "src": "./assets/img/token.png",
             "type": "image/png",
-            "sizes": "550x550",
+            "sizes": "500x500",
             "purpose": "any maskable"
         },
         {
-            "src": "./assets/img/logo.png",
+            "src": "./assets/img/token.png",
             "type": "image/png",
-            "sizes": "550x550",
+            "sizes": "500x500",
             "purpose": "any maskable"
         }
     ],
-    "start_url": "index.html",
+    "start_url": "token.html",
     "background_color": "#1E222D",
     "theme_color": "#1E222D",
     "display": "standalone",

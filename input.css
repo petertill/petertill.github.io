@@ -1,0 +1,205 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --color-bg: #000000;
+  --color-heading: #FBF8EF;
+  --color-paragraph: #E1D5C7;
+  --secondary-color: #2F2F37;
+  --primary-color: #1E222D;
+  --brand-color: #dd7732;
+}
+
+@font-face {
+    font-family: 'defaultFont';
+    src: url('./assets/fonts/Oswald/Oswald-VariableFont_wght.ttf');
+}
+
+body {
+  /*font-family: 'Inter', sans-serif;*/
+  font-family: defaultFont;
+  letter-spacing: 2px;
+  background-color: var(--color-bg);
+  color: #fff;
+}
+
+nav {
+  background-color: var(--primary-color);
+}
+
+#mobile-menu {
+  background-color: var(--primary-color);
+}
+
+header {
+    background-color: var(--secondary-color);
+    background-image: url('./assets/img/ufo.gif');
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-attachment: fixed;
+}
+
+.navbar-brand {
+    color: var(--brand-color);
+}
+
+.clients {
+    background-color: var(--secondary-color);
+}
+
+.knowledge-list {
+    list-style-image: url('./assets/img/checkmark.svg');
+    list-style-position: inside;
+}
+
+@layer base {
+    html {
+      @apply scroll-smooth;
+    }
+  }
+
+@layer components {
+
+    /* Text */
+
+    h2 {
+        @apply mb-5 font-bold opacity-90;
+    }
+
+    h3 {
+        @apply mb-5 opacity-85;
+    }
+
+    p {
+        @apply opacity-80;
+    }
+
+    .text-emphasis {
+        @apply text-2xl font-bold text-primary;
+    }
+
+    /* Buttons */
+
+    .btn {
+        @apply py-4 px-8 rounded-lg text-white block w-fit mt-3;
+    }
+
+    .btn-primary {
+        @apply bg-primary;
+    }
+
+    .btn-secondary {
+        @apply bg-secondary;
+    }
+
+    /* Navbar */
+    nav {
+        @apply flex justify-between items-center p-6 w-full fixed top-0 z-10;
+    }
+
+    .navbar-brand {
+        @apply text-2xl font-bold w-fit;
+    }
+
+    .navbar-logo {
+        @apply w-10 h-10 inline-block;
+    }
+
+    .navbar-menu {
+        @apply gap-5 md:flex hidden;
+    }
+
+    /*#mobile-menu {
+        @apply hidden w-full h-fit z-50 mt-[88px] fixed top-0 left-0 p-5 rounded-b-xl;
+    }*/
+
+    #mobile-menu {
+        @apply hidden h-full w-3/4 z-50 mt-[88px] fixed top-0 right-0 p-5 rounded-b-xl;
+    }
+
+    #mobile-menu .navbar-link {
+        @apply block my-2;
+    }
+
+    .navbar-link {
+        @apply p-3 rounded-md hover:bg-slate-400;
+    }
+
+    .navbar-hamburger {
+        @apply md:hidden;
+    }
+
+    /* Hero */
+
+    header {
+        @apply grid grid-cols-1 sm:grid-cols-2 items-center justify-center gap-8 h-screen mt-20;
+    }
+
+    .hero-text {
+        @apply p-10;
+    }
+
+    .hero-image {
+        @apply w-full h-auto p-10;
+    }
+
+    /* Main */
+
+    /*main {
+        @apply m-auto px-10 xl:w-3/5;
+    }*/
+
+    .main-center {
+        @apply m-auto px-10 xl:w-3/5 my-32;
+    }
+
+    section {
+        @apply my-32;
+    }
+
+    /* Knowledge */
+
+    .knowledge-card {
+        @apply p-5 rounded-3xl bg-gray-800 shadow-xl;
+    }
+
+    .knowledge-image {
+        @apply w-full h-52 rounded-3xl mb-5;
+    }
+
+    /* Inputs */
+
+    input, textarea {
+        @apply w-full p-3 rounded-md bg-slate-400 text-white;
+    }
+
+    /* Nice tables */
+
+    table {
+        @apply w-full bg-slate-400 rounded-lg my-5;
+    }
+
+    th {
+        @apply bg-slate-500 text-white p-3;
+    }
+
+    td {
+        @apply p-3;
+    }
+
+    /* Footer */
+
+    footer {
+        @apply text-white text-center p-5;
+    }
+
+}
